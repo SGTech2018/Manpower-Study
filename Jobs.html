@@ -1,0 +1,165 @@
+
+<html>
+<head>
+  <!--Load the AJAX API-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="css/Jobs.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <style>
+  html, body { height: 100%; }
+</style>
+</head>
+<body>
+  <header class="hero" style="background-image: url(img/header.jpg);visibility: visible;">
+    <div class="hero-center">
+      <h1 class="hero__logo aos-init aos-animate"style="
+      color: white;">2017 ICM Job Research</h1>
+      <h2 class="hero__text aos-init aos-animate">Produced By: SiTF</h2>
+    </div>
+    <span class="hero__scroll aos-init aos-animate" >
+      Scroll down <br>
+      <i class="chevron bottom"></i>
+    </span>
+  </header>
+
+  <section class="top-10-job">
+    <h2 class="aos-scroll" style="visibility:visible">Top 10 Jobs in Market</h2>
+
+    <table class="columns"> 
+      <tr>
+        <th>
+          <div id="piechart_div" class="graph-left"></div>
+        </th>
+        <th>
+          <p id="description-right" class="aos-scroll">
+            The graph presents the top 10 jobs according to the data summary from jobbank as pie chart. Software Developer takes up the highest percentage 16.7%, followed by IT consultant (10.5%). 
+          </p>
+        </th>
+      </tr>
+    </table>
+    <h2 id="job-level-h2" class="aos-scroll">Diagram of Top 10 Skills in the IT Industry</h2>
+    <table>
+      <tr>
+        <th>
+          <div id="columnchart_div" class="graph-whole-left"></div>
+        </th>
+        <th><p id="description-right-2" class="aos-scroll">This diagram shows the top 10 skills in the whole IT industry. Communication and documentation skills are top in rank. They seem to be the most fundamental skills for job seekers to enter the IT industry.</p></th>
+      </tr>
+    </table>
+  </section>
+  <section class="job-adjacency">
+    <h2 id="job-pathway-h2" class="aos-scroll" style="color: white;"></h2>
+    <table>
+      <tr>
+        <th>  <p id="description-left" class="aos-scroll">
+
+        </p>
+        <button id="myBtn" type="button" class="aos-scroll">Overview of Adjacency</button>
+        <div id="myModal" class="modal-popup">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close-popup" style="position: relative;bottom: 28px;width: 50px;visibility: visible;opacity: 0.8 !important;">&times;</span>
+            <img src="img/Picture1.png"></img> 
+          </div>
+        </div> 
+      </div>
+    </th>
+    <th>
+      <div id="sankeychart_div" class="graph-right"></div>
+    </th>
+  </tr>
+</table>
+</section>
+<section class="top-10-skill">
+ <h2 class="aos-scroll">Top 10 Skills By Seniority</h2>
+ <table>
+  <tr>
+    <th>
+      <div id="stackchart_div" class="graph-whole-left"></div>
+    </th>
+    <th>
+      <p id="description-right-3" class="aos-scroll">The graph on the left is a stack diagram, listing the top 10 skills of a particular job. The color represents position level</p>
+    </th>
+  </tr>
+  <tr>
+        <th>
+      <p id="description-left" class="aos-scroll">The graph shows the corresponding percentage of the level information of the first graph.</p>
+    </th>
+    <th>
+      <div id="piechart3_div" class="graph-whole-right"></div>
+    </th>
+
+  </tr>
+</table>
+</section>
+</section>
+<section class="junior-to-senior">
+	<h2 style="color: white;margin-bottom: 39px;">Junior To Senior Skill Transition (Top 20 Skills)</h2>
+  <button type="button" class="show-button-group">Show All Titles</button>
+  <div class="btn-group-customize">
+    <button type="button" class="selector-diff" value="1"></button>
+    <button type="button" class="selector-diff" value="2"></button>
+    <button type="button" class="selector-diff" value="3"></button>
+    <button type="button" class="selector-diff" value="4"></button>
+    <button type="button" class="selector-diff" value="5"></button>
+    
+    <button type="button" class="selector-diff" value="6"></button>
+    <button type="button" class="selector-diff" value="7"></button>
+    <button type="button" class="selector-diff" value="8"></button>
+    <br>
+    <button type="button" class="selector-diff" value="9"></button>
+    <button type="button" class="selector-diff" value="10"></button>
+    <button type="button" class="selector-diff" value="11"></button>
+    <button type="button" class="selector-diff" value="12"></button>
+    <button type="button" class="selector-diff" value="13"></button>
+    <button type="button" class="selector-diff" value="14"></button>
+    <button type="button" class="selector-diff" value="15"></button>
+    <button type="button" class="selector-diff" value="16"></button>
+    <button type="button" class="selector-diff" value="17"></button>
+    <button type="button" class="selector-diff" value="18"></button>
+    <button type="button" class="selector-diff" value="19"></button>
+    <button type="button" class="selector-diff" value="20"></button>
+    <button type="button" class="selector-diff" value="21"></button>
+    <button type="button" class="selector-diff" value="22"></button>
+    <button type="button" class="selector-diff" value="23"></button>
+    <button type="button" class="selector-diff" value="24"></button>
+    <button type="button" class="selector-diff" value="25"></button>
+    <button type="button" class="selector-diff" value="26"></button>
+    <button type="button" class="selector-diff" value="27"></button>
+  </div>
+ 
+        <div id="tablechart_div">
+        </div>
+<p id="description-adjacency" class="aos-scroll">* If only one button is clicked: the ranking is based on the skill count of the selected job; if multiple buttons are clicked: the ranking is based on how many times the skills appear in the top 10 skill of the multi selected jobs.</p>
+<p id="description-adjacency2" class="aos-scroll" >* For some job titles, the senior skills are 'undefined', which indicates the data set is too small (less than 10) to be used as mature output.</p>
+</section>
+
+
+
+<div class="back-to-top" style="">
+  <a href="#piechart_div"><img title="Back to Top" src="img/icon-backtotop-1b04df73090f6b0f3192a3b71874ca3b3cc19dff16adc6cf365cd0c75897f6c0.png" alt="Icon backtotop" style="
+  width: 60px;"></a>
+</div>
+<style>
+.change-color{
+  background-color: grey !important;
+}
+</style>
+<script type="text/javascript" src="js/scrollreveal.js"></script>
+<script type="text/javascript" src="js/Sankey-and-Pie.js"></script>
+<script type="text/javascript" src="js/Column.js"></script>
+<script type="text/javascript" src="js/Popup.js"></script>
+</body>
+<footer>
+ <div style="background-color: #611d1b;width: 100%;
+ height: 100px;">
+</div>
+</footer>
+</html>

@@ -1,0 +1,380 @@
+<html>
+<head>
+  <!--Load the AJAX API-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/aos.css">
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+</head>
+<body>
+ <table class="columns"> 
+  <tr>
+   <th>
+    <div id="piechart_div"></div>
+  </th>
+  <th><div id="piechart3_div"></div></th>
+</tr>
+<tr>
+  <th>
+   <div id="sankeychart_div" style="/* border: 1px solid #ccc; */padding-left: 50px;padding-right: 50px;"></div></th>
+ </tr>
+</table>
+<!--Div that will hold the pie chart-->
+
+
+
+<script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.load('current', {'packages':['sankey']});
+      var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
+      '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+      
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+        // Create the data table.
+        var piedata = new google.visualization.DataTable();
+        piedata.addColumn('string', 'Title');
+        piedata.addColumn('number', 'Count');
+        piedata.addRows([
+         ['Software Developer', 4717],
+         ['IT Consultant ', 2949],
+         ['System  Administrator', 1913],
+         ['Project Manager', 1886],
+         ['Enterprise/System Architect', 1713],
+         ['IT Technicial/Support', 1502],
+         ['IT Analyst', 1376],
+         ['Sales', 1352],
+         ['Business Analyst', 1319],
+         ['Test', 1104],
+         ['Others', 8380]
+         ]);
+
+        // Set chart options
+        var piechart_options = {'title':'Top 10 Jobs',
+        'width':800,
+        'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
+        google.visualization.events.addListener(piechart, 'select', selectHandler);  
+        piechart.draw(piedata, piechart_options);
+
+        function selectHandler() {
+          var data01 = new google.visualization.arrayToDataTable([
+           ['From', 'To', 'Weight'],
+           ['Software Developer', 'IT Consultant ', 1.64],
+           ['Software Developer', 'System Administrator', 1.08],
+           ['Software Developer', 'Project Manager', 0.99],
+           ['Software Developer', 'Enterprise System Architect', 2.01],
+           ['Software Developer', 'IT Technicial Support', 1.02],
+           ['Software Developer', 'IT Analyst', 4.44],
+           ['Software Developer', 'Sales', 0.91],
+           ['Software Developer', 'Business Analyst', 1.23],
+           ['Software Developer', 'Test', 1.22]
+           ]);
+          var data02 = new google.visualization.arrayToDataTable([
+           ['From', 'To', 'Weight'],
+           ['IT Consultant ', 'Software Developer', 1.64],
+           ['IT Consultant ', 'System Administrator', 2.16],
+           ['IT Consultant ', 'Project Manager', 1.94],
+           ['IT Consultant ', 'Enterprise System Architect', 4.0],
+           ['IT Consultant ', 'IT Technicial Support', 2.25],
+           ['IT Consultant ', 'IT Analyst', 3.33],
+           ['IT Consultant ', 'Sales', 2.21],
+           ['IT Consultant ', 'Business Analyst', 2.22],
+           ['IT Consultant ', 'Test', 1.55]
+           ]);
+          var data03 = new google.visualization.arrayToDataTable([
+           ['From', 'To', 'Weight'],
+           ['System Administrator', 'Software Developer', 1.08],
+           ['System Administrator', 'IT Consultant ', 2.16],
+           ['System Administrator', 'Project Manager', 1.38],
+           ['System Administrator', 'Enterprise System Architect', 5.44],
+           ['System Administrator', 'IT Technicial Support', 5.21],
+           ['System Administrator', 'IT Analyst', 1.74],
+           ['System Administrator', 'Sales', 1.54],
+           ['System Administrator', 'Business Analyst', 1.07],
+           ['System Administrator', 'Test', 1.21]
+           ]);      
+          var data04 = new google.visualization.arrayToDataTable([
+           ['From', 'To', 'Weight'],
+           ['Project Manager', 'Software Developer', 0.99],
+           ['Project Manager', 'IT Consultant ', 1.94],
+           ['Project Manager', 'System Administrator', 1.38],
+           ['Project Manager', 'Enterprise System Architect', 2.07],
+           ['Project Manager', 'IT Technicial Support', 1.5],
+           ['Project Manager', 'IT Analyst', 1.76],
+           ['Project Manager', 'Sales', 1.92],
+           ['Project Manager', 'Business Analyst', 1.75],
+           ['Project Manager', 'Test', 1.18],
+           ]);      
+          var data05 = new google.visualization.arrayToDataTable([
+           ['From', 'To', 'Weight'],
+           ['Enterprise System Architect', 'Software Developer', 2.01],
+           ['Enterprise System Architect', 'IT Consultant ', 4.0],
+           ['Enterprise System Architect', 'System Administrator', 5.44],
+           ['Enterprise System Architect', 'Project Manager', 2.07],
+           ['Enterprise System Architect', 'IT Technicial Support', 3.15],
+           ['Enterprise System Architect', 'IT Analyst', 3.26],
+           ['Enterprise System Architect', 'Sales', 2.17],
+           ['Enterprise System Architect', 'Business Analyst', 1.59],
+           ['Enterprise System Architect', 'Test', 1.63]
+           ]);      
+          var data06 = new google.visualization.arrayToDataTable([
+           ['From', 'To', 'Weight'],
+           ['IT Technicial Support', 'Software Developer', 1.02],
+           ['IT Technicial Support', 'IT Consultant ', 2.25],
+           ['IT Technicial Support', 'System Administrator', 5.21],
+           ['IT Technicial Support', 'Project Manager', 1.5],
+           ['IT Technicial Support', 'Enterprise System Architect', 3.15],
+           ['IT Technicial Support', 'IT Analyst', 1.64],
+           ['IT Technicial Support', 'Sales', 2.06],
+           ['IT Technicial Support', 'Business Analyst', 1.12],
+           ['IT Technicial Support', 'Test', 1.22]
+           ]);      
+          var data07 = new google.visualization.arrayToDataTable([
+           ['From', 'To', 'Weight'],
+           ['IT Analyst', 'Software Developer', 4.44],
+           ['IT Analyst', 'IT Consultant ', 3.33],
+           ['IT Analyst', 'System Administrator', 1.74],
+           ['IT Analyst', 'Project Manager', 1.76],
+           ['IT Analyst', 'Enterprise System Architect', 3.26],
+           ['IT Analyst', 'IT Technicial Support', 1.64],
+           ['IT Analyst', 'Sales', 1.33],
+           ['IT Analyst', 'Business Analyst', 2.35],
+           ['IT Analyst', 'Test', 1.49]
+           ]);      
+          var data08 = new google.visualization.arrayToDataTable([
+           ['From', 'To', 'Weight'],
+           ['Sales', 'Software Developer', 0.91],
+           ['Sales', 'IT Consultant ', 2.21],
+           ['Sales', 'System Administrator', 1.54],
+           ['Sales', 'Project Manager', 1.92],
+           ['Sales', 'Enterprise System Architect', 2.17],
+           ['Sales', 'IT Technicial Support', 2.06],
+           ['Sales', 'IT Analyst', 1.33],
+           ['Sales', 'Business Analyst', 1.19],
+           ['Sales', 'Test', 1.19]
+           ]);      
+          var data09 = new google.visualization.arrayToDataTable([
+           ['From', 'To', 'Weight'],
+           ['Business Analyst', 'Software Developer', 1.23],
+           ['Business Analyst', 'IT Consultant ', 2.22],
+           ['Business Analyst', 'System Administrator', 1.07],
+           ['Business Analyst', 'Project Manager', 1.75],
+           ['Business Analyst', 'Enterprise System Architect', 1.59],
+           ['Business Analyst', 'IT Technicial Support', 1.12],
+           ['Business Analyst', 'IT Analyst', 2.35],
+           ['Business Analyst', 'Sales', 1.19],
+           ['Business Analyst', 'Test', 1.31]
+           ]);      
+          var data10 = new google.visualization.arrayToDataTable([
+           ['From', 'To', 'Weight'],
+           ['Test', 'Software Developer', 1.22],
+           ['Test', 'IT Consultant ', 1.55],
+           ['Test', 'System Administrator', 1.21],
+           ['Test', 'Project Manager', 1.18],
+           ['Test', 'Enterprise System Architect', 1.63],
+           ['Test', 'IT Technicial Support', 1.22],
+           ['Test', 'IT Analyst', 1.49],
+           ['Test', 'Sales', 1.19],
+           ['Test', 'Business Analyst', 1.31]
+           ]);
+          var data11 = new google.visualization.DataTable();
+          data11.addColumn('string', 'Title');
+          data11.addColumn('number', 'Count');
+          data11.addRows([
+           ['Network Engineer', 1069],
+           ['Web developer', 871],
+           ['Data Analyst/ BI', 715],
+           ['IT Security', 672],
+           ['Business Consultant', 640],
+           ['Business - Others (Accountant, Audit etc.)', 640],
+           ['IT Manager', 476],
+           ['IT Service', 475],
+           ['Mobile developer', 466],
+           ['Others (Devops, r&d)', 396],
+           ['Data Scientist', 391],
+           ['IT Operations', 389],
+           ['Database Administrator', 376],
+           ['UI/UX', 278],
+           ['Marketing', 218],
+           ['Product Manager', 191],
+           ['Embedded  System Developer', 117]
+           ]);
+          var data01_1 = new google.visualization.arrayToDataTable([
+            ['Level', 'Count'],
+            ['Junior', 3393], ['Middle', 1199], ['Senior', 101]
+            ]);
+          var data02_1 = new google.visualization.arrayToDataTable([
+            ['Level', 'Count'],
+            ['Junior', 1496], ['Middle', 1336], ['Senior', 104]
+            ]);
+          var data03_1 = new google.visualization.arrayToDataTable([
+            ['Level', 'Count'],
+            ['Junior', 1426], ['Middle', 441], ['Senior', 55]
+            ]);
+          var data04_1 = new google.visualization.arrayToDataTable([
+            ['Level', 'Count'],
+            ['Junior', 1060], ['Middle', 667], ['Senior', 161]
+            ]);
+          var data05_1 = new google.visualization.arrayToDataTable([
+            ['Level', 'Count'],
+            ['Junior', 1056], ['Middle', 507], ['Senior', 142]
+            ]);
+          var data06_1 = new google.visualization.arrayToDataTable([
+            ['Level', 'Count'],
+            ['Junior', 1327], ['Middle', 137], ['Senior', 12]
+            ]);
+          var data07_1 = new google.visualization.arrayToDataTable([
+            ['Level', 'Count'],
+            ['Junior', 995], ['Middle', 343], ['Senior', 26]
+            ]);
+          var data08_1 = new google.visualization.arrayToDataTable([
+            ['Level', 'Count'],
+            ['Junior', 942], ['Middle', 327], ['Senior', 95]
+            ]);
+          var data09_1 = new google.visualization.arrayToDataTable([
+            ['Level', 'Count'],
+            ['Junior', 824], ['Middle', 445], ['Senior', 42]
+            ]);
+          var data10_1 = new google.visualization.arrayToDataTable([
+            ['Level', 'Count'],
+            ['Junior', 790], ['Middle', 325], ['Senior', 35]
+            ]);
+          var data11_1 = new google.visualization.arrayToDataTable([
+            ['Level', 'Count'],
+            ['Junior', 5924],['Middle', 2177],['Senior', 301]
+            ]);
+          if (piechart.getSelection()[0]){
+            var selection = piechart.getSelection();
+            var row = selection[0].row;
+            console.log(row);
+            row += 1;
+            if (row) {
+              if (row == 1){
+                title = data01;
+                level = data01_1;
+              }
+              else if (row == 2){
+                title = data02;
+                level = data02_1;
+              }
+              else if (row == 3){
+                title = data03;
+                level = data03_1;
+              }
+              else if (row == 4){
+                title = data04;
+                level = data04_1;
+              }
+              else if (row == 5){
+                title = data05;
+                level = data05_1;
+              }
+              else if (row == 6){
+                title = data06;
+                level = data06_1;
+              }
+              else if (row == 7){
+                title = data07;
+                level = data07_1;
+              }
+              else if (row == 8){
+                title = data08;
+                level = data08_1;
+              }            
+              else if (row == 9){
+                title = data09;
+                level = data09_1;
+              }
+              else if (row == 10){
+                title = data10;
+                level = data10_1;
+              }
+              else if (row == 11){
+                title = data11;
+                level = data11_1;
+              }
+            }
+            if (row >= 1 && row <= 10){
+              // *******************
+              // Draw Sankey Diagram
+              // *******************
+              google.charts.setOnLoadCallback(drawSankeyChart(title));
+              google.charts.setOnLoadCallback(drawPieChart3(level));
+            }
+            else{
+              google.charts.setOnLoadCallback(drawPieChart2(title));
+              google.charts.setOnLoadCallback(drawPieChart3(level));
+            }
+
+            function drawSankeyChart(title) {
+                // Sets chart options.
+                var options = {
+                  width: 500,
+                  height: 300,
+                  sankey: {
+                    node: {
+                      colors: colors
+                    },
+                    link: {
+                      colorMode: 'gradient',
+                      colors: colors
+                    }
+                  }
+                };
+                // Instantiates and draws our chart, passing in some options.
+                var chart = new google.visualization.Sankey(document.getElementById('sankeychart_div'));
+                chart.draw(title, options);
+                $('#sankeychart_div').css("padding-left", "130");
+                $('#sankeychart_div').css("padding-right", "200");
+              }
+              // ****************
+              // Draw Pie Diagram
+              // ****************
+              
+              function drawPieChart3(level) {
+                var item_title = selection[0];
+                title_string = piedata.getFormattedValue(item_title.row, 0);
+                var options = {
+                  'title': title_string,
+                  'width':500,
+                  'height':300
+                };
+                var piechart3 = new google.visualization.PieChart(document.getElementById('piechart3_div'));
+                piechart3.draw(level, options);
+              }
+              function drawPieChart2(title){
+              // Set chart options
+              var piechart_options2 = {'title':'Other Jobs',
+              'width':800,
+              'height':300,
+
+            };          
+              // Instantiate and draw our chart, passing in some options.
+              var piechart2 = new google.visualization.PieChart(document.getElementById('sankeychart_div'));
+              piechart2.draw(data11, piechart_options2);
+              $('#sankeychart_div').css("padding-left", "0");
+              $('#sankeychart_div').css("padding-right", "50");
+            }
+          }
+        }
+      }
+    </script>
+
+
+    <script src="js/aos.js"></script>
+  </body>
+  </html>

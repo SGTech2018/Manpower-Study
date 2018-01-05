@@ -1,0 +1,160 @@
+
+div.back-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    z-index: 3;
+}
+div.back-to-top:hover{
+	opacity: 0.4;
+}
+h2.aos-scroll{
+
+	margin-left: 167px;
+    margin-top: 50px;
+
+}
+div.graph-left{
+	margin-top:5px;
+	margin-left:57px;
+}
+p{
+	color: #8a8181;
+  width: 400px;
+}
+#description-adjacency{
+font-weight: bold;
+width:1000px;
+margin-top:32px;
+}
+#description-adjacency2{
+font-weight: bold;
+width:1000px;
+}
+#description-right{
+  float:right;
+}
+#description-right-3{
+    margin-top: 42px;
+        margin-left: -106px;
+    width: 328px;
+}
+      
+#description-left{
+    margin-left: 127px;
+    margin-top: -106px;
+}
+
+#description-right-2{
+   margin-left: 116px;
+}
+div.graph-right{
+	margin-top: 30px;
+    margin-left:135px;
+}
+div.graph-whole-left{
+    margin-left:55px;
+}
+div.graph-whole-right{
+    margin-left: -400px;
+float:right;
+
+}
+section.job-adjacency{
+	background-color:#611d1b;
+}
+section{
+    padding-top: 22px;
+    padding-bottom: 85px;
+    margin-top: 23px;
+}
+section.difference{
+    /*background-color:#611d1b;*/
+}
+section.junior-to-senior{
+    margin-top: 0px;
+   background-color: #611d1b;
+   padding-left: 158px;
+    
+}
+#columnchart_div{
+   padding-left: 61px;
+   margin-bottom: 58px;
+}
+/* The Modal (background) */
+.modal-popup {
+	display: none; /* Hidden by default */
+	overflow: auto; /* Enable scroll if needed */
+   position: fixed;
+   z-index: 100;
+   padding-top: 95px;
+   padding-bottom: 95px;
+   left: 150px;
+   bottom: 20%;
+   top: 20%;
+   width: 80%;
+   height: 500px;
+   background-color: rgba(0,0,0,0.4);
+   padding-bottom: 95px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close-popup {
+	opacity:0.8;
+	z-index:2000;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+#myBtn, .selector-diff, .show-button-group{
+   margin-left: 106px;
+   background-color: #da9d2d;
+   border-radius: 12px;
+   color: white;
+   height: 40px;
+   font-weight: bold;
+   border-color: #da9d2d;
+}
+.selector-diff{
+  margin-left:0px !important;
+  margin-top:14px;
+}
+#myBtn:hover{
+    background-color: #7d5711;
+    border-color: #7d5711;
+}
+.selector-diff:hover{
+    background-color: #7d5711;
+    border-color: #7d5711;
+}
+.show-button-group:hover{
+    background-color: #7d5711;
+    border-color: #7d5711;
+}
+.btn-group-customize,.show-button-group{
+      margin-left: 0px;
+      margin-bottom: 45px;
+}
+.change-color-table{
+  background-color:#da9d2d;
+}
+.tablechart_format{
+  border-radius: 1em;
+}

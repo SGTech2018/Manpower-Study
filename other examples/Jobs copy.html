@@ -1,0 +1,85 @@
+<html>
+<head>
+  <!--Load the AJAX API-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="css/Jobs.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="js/aos.js"></script>
+</head>
+<body data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
+
+
+  <header class="hero" style="background-color: #30353d;height: 500px;">
+    <div class="hero-center">
+      <h1 class="hero__logo aos-init aos-animate" data-aos="zoom-in" style="
+      color: white;">ICM Job Research</h1>
+      <h2 class="hero__text aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400">Demand and Supply</h2>
+    </div>
+    <span class="hero__scroll aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
+      Scroll down <br>
+      <i class="chevron bottom"></i>
+    </span>
+  </header>
+
+
+  <h2 style="
+  position: relative;
+  left: 95px;margin-top: 50px;
+  ">Job Count Percentage</h2>
+  <table class="columns"> 
+    <tr>
+      <th><div id="piechart_div" style="
+      position: relative;
+      left: -17px;
+      "></div></th>
+
+    </tr>
+  </table>
+  <h2 id="job-pathway-h2" style="
+  position: relative;
+  left: 95px;margin-top: 50px;
+  "></h2>
+  <table>
+    <tr>
+
+     <th>
+
+      <div id="sankeychart_div" style="padding-left: 130px;padding-right: 200px;paddint-top: 29px;margin-top: 34px;"></div></th>
+    </tr>
+  </table>
+  <h2 id="job-level-h2" style="
+  position: relative;
+  left: 95px;margin-top: 50px;
+  "></h2>
+  <table>
+    <tr>
+
+     <th>
+
+      <div id="stackchart_div" style="padding-left: 130px;padding-right: 200px;paddint-top: 29px;margin-top: 34px;"></div></th>
+      <th><div id="piechart3_div" style="position: relative;
+      left: -386px;"></div></th>
+    </tr>
+  </table>
+
+  <div class="back-to-top" style="">
+    <a href="#piechart_div"><img title="Back to Top" src="img/icon-backtotop-1b04df73090f6b0f3192a3b71874ca3b3cc19dff16adc6cf365cd0c75897f6c0.png" alt="Icon backtotop" style="
+    width: 60px;"></a>
+  </div>
+
+
+  <script type="text/javascript" src="js/Sankey-and-Pie.js"></script>
+
+</body>
+<footer>
+	<div style="background-color: #30353d;width: 100%;
+  height: 100px;">
+</div>
+</footer>
+</html>

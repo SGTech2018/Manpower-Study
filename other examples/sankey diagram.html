@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/customization.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+  <div class="container" style="
+  margin-top: 50px;
+  ">
+  <th>
+    <select class="selectpicker" id="chart" name='select1' onchange="change()">
+      <option selected disabled>Choose</option> 
+      <option value="01">Software Developer</option>
+      <option value="02">IT Consultant</option>
+      <option value="03">System Administrator</option>
+      <option value="04">Project Manager</option>
+      <option value="05">Enterprise System Architect</option>
+      <option value="06">IT Technicial Support</option>
+      <option value="07">IT Analyst</option>
+      <option value="08">Sales</option>
+      <option value="09">Business Analyst</option>
+      <option value="10">Test</option>
+    </select>
+  </th>
+  <div id="sankey_basic"></div>
+</div>
+
+
+<script type = "text/javascript">
+  google.charts.load('current', {'packages':['sankey']});
+  var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
+  '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
+
+  function change(){
+    var listbox = document.getElementById("chart");
+    var selIndex = listbox.selectedIndex;
+    var selValue = listbox.options[selIndex].value; // 01, 02 etc.
+    var selText = listbox.options[selIndex].text;
+
+    google.charts.setOnLoadCallback(drawSankeyChart);
+
+
+    // Sets chart options.
+    var options = {
+      filterColumnIndex: 2,
+      width: 500,
+      height: 300,
+      sankey: {
+        node: {
+          colors: colors
+        },
+        link: {
+          colorMode: 'gradient',
+          colors: colors
+        }
+      }
+    };
+    function drawSankeyChart(title) {
+      var data01 = new google.visualization.arrayToDataTable([
+       ['From', 'To', 'Weight'],
+       ['Software Developer', 'IT Consultant ', 1.64],
+       ['Software Developer', 'System Administrator', 1.08],
+       ['Software Developer', 'Project Manager', 0.99],
+       ['Software Developer', 'Enterprise System Architect', 2.01],
+       ['Software Developer', 'IT Technicial Support', 1.02],
+       ['Software Developer', 'IT Analyst', 4.44],
+       ['Software Developer', 'Sales', 0.91],
+       ['Software Developer', 'Business Analyst', 1.23],
+       ['Software Developer', 'Test', 1.22]
+       ]);
+      var data02 = new google.visualization.arrayToDataTable([
+       ['From', 'To', 'Weight'],
+       ['IT Consultant ', 'Software Developer', 1.64],
+       ['IT Consultant ', 'System Administrator', 2.16],
+       ['IT Consultant ', 'Project Manager', 1.94],
+       ['IT Consultant ', 'Enterprise System Architect', 4.0],
+       ['IT Consultant ', 'IT Technicial Support', 2.25],
+       ['IT Consultant ', 'IT Analyst', 3.33],
+       ['IT Consultant ', 'Sales', 2.21],
+       ['IT Consultant ', 'Business Analyst', 2.22],
+       ['IT Consultant ', 'Test', 1.55]
+       ]);
+      var data03 = new google.visualization.arrayToDataTable([
+       ['From', 'To', 'Weight'],
+       ['System Administrator', 'Software Developer', 1.08],
+       ['System Administrator', 'IT Consultant ', 2.16],
+       ['System Administrator', 'Project Manager', 1.38],
+       ['System Administrator', 'Enterprise System Architect', 5.44],
+       ['System Administrator', 'IT Technicial Support', 5.21],
+       ['System Administrator', 'IT Analyst', 1.74],
+       ['System Administrator', 'Sales', 1.54],
+       ['System Administrator', 'Business Analyst', 1.07],
+       ['System Administrator', 'Test', 1.21]
+       ]);      
+      var data04 = new google.visualization.arrayToDataTable([
+       ['From', 'To', 'Weight'],
+       ['Project Manager', 'Software Developer', 0.99],
+       ['Project Manager', 'IT Consultant ', 1.94],
+       ['Project Manager', 'System Administrator', 1.38],
+       ['Project Manager', 'Enterprise System Architect', 2.07],
+       ['Project Manager', 'IT Technicial Support', 1.5],
+       ['Project Manager', 'IT Analyst', 1.76],
+       ['Project Manager', 'Sales', 1.92],
+       ['Project Manager', 'Business Analyst', 1.75],
+       ['Project Manager', 'Test', 1.18],
+       ]);      
+      var data05 = new google.visualization.arrayToDataTable([
+       ['From', 'To', 'Weight'],
+       ['Enterprise System Architect', 'Software Developer', 2.01],
+       ['Enterprise System Architect', 'IT Consultant ', 4.0],
+       ['Enterprise System Architect', 'System Administrator', 5.44],
+       ['Enterprise System Architect', 'Project Manager', 2.07],
+       ['Enterprise System Architect', 'IT Technicial Support', 3.15],
+       ['Enterprise System Architect', 'IT Analyst', 3.26],
+       ['Enterprise System Architect', 'Sales', 2.17],
+       ['Enterprise System Architect', 'Business Analyst', 1.59],
+       ['Enterprise System Architect', 'Test', 1.63]
+       ]);      
+      var data06 = new google.visualization.arrayToDataTable([
+       ['From', 'To', 'Weight'],
+       ['IT Technicial Support', 'Software Developer', 1.02],
+       ['IT Technicial Support', 'IT Consultant ', 2.25],
+       ['IT Technicial Support', 'System Administrator', 5.21],
+       ['IT Technicial Support', 'Project Manager', 1.5],
+       ['IT Technicial Support', 'Enterprise System Architect', 3.15],
+       ['IT Technicial Support', 'IT Analyst', 1.64],
+       ['IT Technicial Support', 'Sales', 2.06],
+       ['IT Technicial Support', 'Business Analyst', 1.12],
+       ['IT Technicial Support', 'Test', 1.22]
+       ]);      
+      var data07 = new google.visualization.arrayToDataTable([
+       ['From', 'To', 'Weight'],
+       ['IT Analyst', 'Software Developer', 4.44],
+       ['IT Analyst', 'IT Consultant ', 3.33],
+       ['IT Analyst', 'System Administrator', 1.74],
+       ['IT Analyst', 'Project Manager', 1.76],
+       ['IT Analyst', 'Enterprise System Architect', 3.26],
+       ['IT Analyst', 'IT Technicial Support', 1.64],
+       ['IT Analyst', 'Sales', 1.33],
+       ['IT Analyst', 'Business Analyst', 2.35],
+       ['IT Analyst', 'Test', 1.49]
+       ]);      
+      var data08 = new google.visualization.arrayToDataTable([
+       ['From', 'To', 'Weight'],
+       ['Sales', 'Software Developer', 0.91],
+       ['Sales', 'IT Consultant ', 2.21],
+       ['Sales', 'System Administrator', 1.54],
+       ['Sales', 'Project Manager', 1.92],
+       ['Sales', 'Enterprise System Architect', 2.17],
+       ['Sales', 'IT Technicial Support', 2.06],
+       ['Sales', 'IT Analyst', 1.33],
+       ['Sales', 'Business Analyst', 1.19],
+       ['Sales', 'Test', 1.19]
+       ]);      
+      var data09 = new google.visualization.arrayToDataTable([
+       ['From', 'To', 'Weight'],
+       ['Business Analyst', 'Software Developer', 1.23],
+       ['Business Analyst', 'IT Consultant ', 2.22],
+       ['Business Analyst', 'System Administrator', 1.07],
+       ['Business Analyst', 'Project Manager', 1.75],
+       ['Business Analyst', 'Enterprise System Architect', 1.59],
+       ['Business Analyst', 'IT Technicial Support', 1.12],
+       ['Business Analyst', 'IT Analyst', 2.35],
+       ['Business Analyst', 'Sales', 1.19],
+       ['Business Analyst', 'Test', 1.31]
+       ]);      
+      var data10 = new google.visualization.arrayToDataTable([
+       ['From', 'To', 'Weight'],
+       ['Test', 'Software Developer', 1.22],
+       ['Test', 'IT Consultant ', 1.55],
+       ['Test', 'System Administrator', 1.21],
+       ['Test', 'Project Manager', 1.18],
+       ['Test', 'Enterprise System Architect', 1.63],
+       ['Test', 'IT Technicial Support', 1.22],
+       ['Test', 'IT Analyst', 1.49],
+       ['Test', 'Sales', 1.19],
+       ['Test', 'Business Analyst', 1.31]
+       ]);
+
+
+    // Instantiates and draws our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+    if (selValue == '01') {
+      title = data01;
+    }
+    else if (selValue == '02'){
+      title = data02;
+    }
+    else if (selValue == '02'){
+      title = data02;
+    }    else if (selValue == '03'){
+      title = data03;
+    }    else if (selValue == '04'){
+      title = data04;
+    }    else if (selValue == '05'){
+      title = data05;
+    }    else if (selValue == '06'){
+      title = data06;
+    }    else if (selValue == '07'){
+      title = data07;
+    }    else if (selValue == '08'){
+      title = data08;
+    }    else if (selValue == '09'){
+      title = data09;
+    }    else if (selValue == '10'){
+      title = data10;
+    }
+    chart.draw(title, options);
+  }
+}
+
+
+</script>
+</body>
+</html>

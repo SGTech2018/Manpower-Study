@@ -693,28 +693,7 @@ prepareDrawTable();
 
 });
 
-    // click the table cell
-    // not working 
-    $(".table-cell").click(function(){
-      var $this = $(this);
-      if(!$this.hasClass('change-color-table')){
-        $this.addClass('change-color-table');
-     }
-     else{
-        $this.removeClass('change-color-table');
-     }
-
-  });
-
-    // click the year button
-    $(".year-button").click(function() {
-      var $this = $(this);
-      if(!$(this).hasClass('change-color')){
-        $(this).addClass('change-color');
-     }
-     else{
-        $(this).removeClass('change-color');}
-     });
+ 
  });// document.ready
 
 function prepareDrawTable(){
@@ -1380,7 +1359,7 @@ function drawPieChart_softwareDeveloper() {
                $('#consultant_p').show();
                $('#piechart_consultant_div').show();
             }
-            
+
               //drawTableChart(num);
               $('#stackchart_div').show();
               $('#piechart3_div').show();
@@ -1412,7 +1391,7 @@ function drawPieChart_softwareDeveloper() {
                       colors: colors,
                       label: { 
                          fontSize: 16,
-                         
+
                       }},
                       link: {
                          colorMode: 'gradient',

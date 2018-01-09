@@ -1,3 +1,4 @@
+  $('#consultant_p').hide();
    var data01_3 = [['sql', 'java', 'leadership'],
    ['java', 'communication skill', 'software development'],
    ['software development', 'software development', 'java'],
@@ -640,7 +641,7 @@ table.className += ("tablechart_format");
 
 var data_total_3 = [data01_3, data02_3, data03_3, data04_3, data05_3, data06_3, data07_3, data08_3, data09_3, data10_3, data11_3, data12_3, data13_3, data14_3, data15_3, data16_3, data17_3, data18_3, data19_3, data20_3, data21_3, data22_3, data23_3, data24_3, data25_3, data26_3, data27_3];
 var titles = [];
-var all_jobs = ['Software Developer', 'IT Consultant ', 'System Administrator', 'Project Manager', 'Enterprise/System Architect', 'IT Technicial/hhSupport', 'Sales', 'IT Analyst', 'Business Analyst', 'Test', 'Network Engineer', 'Web developer', 'Data Analyst BI', 'IT Security', 'Business - Others (Accountant, Audit etc.', 'Business Consultant', 'IT Service', 'IT Manager', 'Mobile developer', 'Data Scientist', 'IT Operations', 'Others (Devops, r&d)', 'Database Administrator', 'UI/UX', 'Marketing', 'Product Manager', 'Embedded  System Developer'];
+var all_jobs = ['Software Developer', 'IT Consultant ', 'System Administrator', 'Project Manager', 'Enterprise/System Architect', 'IT Technicial/hhSupport', 'Sales', 'IT Analyst', 'Business Analyst', 'Test', 'Network Engineer', 'Web developer', 'Data Analyst BI', 'Security', 'Business - Others (Accountant, Audit etc.', 'Business Consultant', 'IT Service', 'IT Manager', 'Mobile developer', 'Data Scientist', 'IT Operations', 'Others (Devops, r&d)', 'Database Administrator', 'UI/UX', 'Marketing', 'Product Manager', 'Embedded  System Developer'];
 
 $( document ).ready(function() {
    $(".btn-group-customize").hide();
@@ -691,6 +692,7 @@ prepareDrawTable();
 });
 
     // click the table cell
+    // not working 
     $(".table-cell").click(function(){
       var $this = $(this);
       if(!$this.hasClass('change-color-table')){
@@ -700,8 +702,18 @@ prepareDrawTable();
        $this.removeClass('change-color-table');
     }
 
- })
  });
+
+    // click the year button
+    $(".year-button").click(function() {
+      var $this = $(this);
+      if(!$(this).hasClass('change-color')){
+       $(this).addClass('change-color');
+   }
+   else{
+    $(this).removeClass('change-color');}
+ });
+ });// document.ready
 
 function prepareDrawTable(){
   var total_array_j = [];
@@ -920,7 +932,7 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
     ['System  Administrator', 'Business Consultant', 2.13],
     ['System  Administrator', 'Business  Others (Accountant A', 2.07],
     ['System  Administrator', 'IT Analyst', 1.73],
-    ['System  Administrator', 'IT Security', 1.57]
+    ['System  Administrator', 'Security', 1.57]
     ]);      
   var data04 = new google.visualization.arrayToDataTable([
     ['From', 'To', 'Weight'],
@@ -1020,7 +1032,7 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
     ['Network Engineer', 1069],
     ['Web developer', 871],
     ['Data Analyst/ BI', 715],
-    ['IT Security', 672],
+    ['Security', 672],
     ['Business Consultant', 640],
     ['Business - Others (Accountant, Audit etc.)', 640],
     ['IT Manager', 476],
@@ -1218,6 +1230,26 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
 
   
 
+              function drawPieChart_consultant() {
+               var piedata4 =  new google.visualization.arrayToDataTable([
+   ['Title', 'Count'],
+        ['SAP consultant', 9199],
+         ['Oracle consultant', 4154],
+         ['Generic IT Consultant', 14858]]);
+                 var options = {
+                  'title': 'IT Consultant Components',
+                  'width':800,
+                  'height':300,
+                  slices: {  
+                   0:{offset:0.05},
+                   1:{offset:0.05}, 
+                   2: {offset: 0.05},
+                }
+             };
+             var piechart4 = new google.visualization.PieChart(document.getElementById('piechart_consultant_div'));
+             piechart4.draw(piedata4, options);
+
+          }
   // ********************************************
   // ********************************************
   // Function Select Handler - google chart event
@@ -1303,6 +1335,12 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
               google.charts.setOnLoadCallback(drawSankeyChart(title));
               google.charts.setOnLoadCallback(drawPieChart3(level));
               google.charts.setOnLoadCallback(drawStackChart(skill));
+              $('#consultant_p').hide();
+              if (row == 2){
+               google.charts.setOnLoadCallback(drawPieChart_consultant());
+               $('#consultant_p').show();
+              }
+              
               //drawTableChart(num);
               $('#stackchart_div').show();
               $('#piechart3_div').show();

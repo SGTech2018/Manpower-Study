@@ -36,13 +36,13 @@ width:1000px;
 }
 #description-right-3{
     margin-top: 42px;
-        margin-left: -106px;
-    width: 328px;
+    margin-left: -51px;
+    width: 271px;
 }
       
 #description-left{
-    margin-left: 127px;
-    margin-top: -106px;
+    margin-left: 191px;
+    margin-top: -7px;
 }
 
 #description-right-2{
@@ -56,9 +56,10 @@ div.graph-whole-left{
     margin-left:55px;
 }
 div.graph-whole-right{
-    margin-left: -400px;
+    margin-left: -326px;
 float:right;
-
+margin-top: 98px;
+    margin-bottom: 29px;
 }
 section.job-adjacency{
 	background-color:#611d1b;
@@ -132,6 +133,19 @@ section.junior-to-senior{
    font-weight: bold;
    border-color: #da9d2d;
 }
+.button-group-year{
+    margin-left: 169px;
+    margin-top: 30px;
+}
+.year-button{
+   background-color: #da9d2d;
+   color: white;
+   height: 40px;
+   font-weight: bold;
+   border-color: #da9d2d;
+       width: 148px;
+       margin-right:8px;
+}
 .selector-diff{
   margin-left:0px !important;
   margin-top:14px;
@@ -157,4 +171,8 @@ section.junior-to-senior{
 }
 .tablechart_format{
   border-radius: 1em;
+}
+section.compare-year{
+      margin-top: 0px;
+    padding-top: 0px;
 }

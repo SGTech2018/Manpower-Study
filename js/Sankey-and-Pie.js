@@ -1,580 +1,582 @@
-  $('#consultant_p').hide();
-   var data01_3 = [['sql', 'java', 'leadership'],
-   ['java', 'communication skill', 'software development'],
-   ['software development', 'software development', 'java'],
-   ['documentation', 'sql', 'communication skill'],
-   ['communication skill', 'documentation', 'agile'],
-   ['html', 'javascript', 'reporting'],
-   ['c#', 'agile', 'information system'],
-   ['javascript', 'information system', 'project management'],
-   ['oracle', 'oracle', 'application development'],
-   ['application development', 'html', 'sql'],
-   ['information technology',
-   'software development life cycle',
-   'software development life cycle'],
-   ['information system', 'problem solving', 'problem solving'],
-   ['web service', 'spring', 'documentation'],
-   ['software development life cycle', 'reporting', 'web service'],
-   ['web application', 'web service', 'consulting'],
-   ['agile', 'application development', 'linux'],
-   ['sql server', 'project management', 'business requirement'],
-   ['problem solving', 'component', 'component'],
-   ['spring', 'jquery', 'automation'],
-   ['cs', 'scripting', 'html']];
-   var data02_3 = [['communication skill', 'sap', 'communication skill'],
-   ['documentation', 'communication skill', 'leadership'],
-   ['sap', 'information system', 'information system'],
-   ['sql', 'consulting', 'software development'],
-   ['information system', 'sql', 'oracle'],
-   ['software development', 'oracle', 'sap'],
-   ['reporting', 'documentation', 'sql'],
-   ['information technology', 'business process', 'business requirement'],
-   ['java', 'business requirement', 'documentation'],
-   ['oracle', 'java', 'software development life cycle'],
-   ['troubleshooting', 'reporting', 'consulting'],
-   ['problem solving', 'word', 'project management'],
-   ['word', 'software development', 'information technology'],
-   ['business requirement', 'project management', 'business process'],
-   ['project management', 'problem solving', 'agile'],
-   ['consulting', 'leadership', 'problem solving'],
-   ['scripting', 'troubleshooting', 'reporting'],
-   ['unix', 'information technology', 'java'],
-   ['business process', 'unix', 'crm'],
-   ['software development life cycle', 'scripting', 'technical support']];
-   var data03_3 =  [['troubleshooting',
-   'communication skill',
-   'project management'],
-   ['communication skill', 'documentation', 'leadership'],
-   ['documentation', 'information system', 'problem solving'],
-   ['sql', 'sql', 'communication skill'],
-   ['information technology', 'troubleshooting', 'documentation'],
-   ['information system', 'scripting', 'reporting'],
-   ['operating system', 'linux', 'software development'],
-   ['active directory', 'java', 'oracle'],
-   ['linux', 'project management', 'itil'],
-   ['firewall', 'reporting', 'writing'],
-   ['problem solving', 'leadership', 'troubleshooting'],
-   ['scripting', 'oracle', 'virtualization'],
-   ['vmware', 'unix', 'vmware'],
-   ['technical support', 'automation', 'consulting'],
-   ['project management', 'information technology', 'business development'],
-   ['word', 'problem solving', 'linux'],
-   ['java', 'software development', 'm project'],
-   ['reporting', 'vmware', 'talent acquisition'],
-   ['router', 'operating system', 'active directory'],
-   ['software development', 'component', 'information system']];
-   var data04_3 = [['project management',
-   'project management',
-   'project management'],
-   ['communication skill', 'communication skill', 'communication skill'],
-   ['documentation', 'reporting', 'reporting'],
-   ['information technology', 'information system', 'leadership'],
-   ['reporting', 'leadership', 'software development'],
-   ['sql', 'documentation', 'stakeholder management'],
-   ['information system', 'software development', 'agile'],
-   ['software development', 'information technology', 'consulting'],
-   ['word', 'pmp', 'documentation'],
-   ['problem solving', 'sap', 'information system'],
-   ['pmp', 'software development life cycle', 'pmp'],
-   ['agile', 'sql', 'software development life cycle'],
-   ['troubleshooting', 'agile', 'information technology'],
-   ['leadership', 'business process', 'problem solving'],
-   ['business requirement', 'java', 'business process'],
-   ['java', 'problem solving', 'risk management'],
-   ['excel', 'consulting', 'project delivery'],
-   ['oracle', 'application development', 'marketing'],
-   ['software development life cycle',
-   'business requirement',
-   'application development'],
-   ['consulting', 'oracle', 'sap']];
-   var data05_3 = [['communication skill',
-   'communication skill',
-   'communication skill'],
-   ['documentation', 'documentation', 'leadership'],
-   ['troubleshooting', 'information system', 'consulting'],
-   ['sql', 'java', 'project management'],
-   ['linux', 'sql', 'software development'],
-   ['information system', 'project management', 'java'],
-   ['information technology', 'leadership', 'reporting'],
-   ['project management', 'software development', 'component'],
-   ['problem solving', 'information technology', 'problem solving'],
-   ['java', 'reporting', 'business requirement'],
-   ['software development', 'oracle', 'information system'],
-   ['reporting', 'business requirement', 'documentation'],
-   ['vmware', 'consulting', 'web service'],
-   ['operating system', 'linux', 'agile'],
-   ['technical support', 'agile', 'javascript'],
-   ['word', 'scripting', 'enterprise architecture'],
-   ['automation', 'troubleshooting', 'business process'],
-   ['oracle', 'problem solving', 'software design'],
-   ['scripting', 'sap', 'information technology'],
-   ['firewall', 'component', 'continuous improvement']];
-   var data06_3 = [['troubleshooting',
-   'communication skill',
-   'leadership'],
-   ['communication skill', 'documentation', 'business requirement'],
-   ['documentation', 'troubleshooting', 'project management'],
-   ['information technology', 'information system', 'information system'],
-   ['information system', 'reporting', 'communication skill'],
-   ['word', 'project management', 'business development'],
-   ['operating system', 'sql', 'agile'],
-   ['technical support', 'problem solving', 'reporting'],
-   ['reporting', 'java', 'information technology'],
-   ['problem solving', 'scripting', 'software development'],
-   ['software development', 'linux', 'java'],
-   ['sql', 'software development', 'automation'],
-   ['access', 'technical support', 'writing'],
-   ['project management', 'business requirement', 'account management'],
-   ['microsoft office', 'oracle', 'software development life cycle'],
-   ['java', 'agile', 'application development'],
-   ['component', 'root cause analysis', 'managed service'],
-   ['linux', 'software development life cycle', 'sap'],
-   ['html', 'information technology', 'oracle'],
-   ['excel', 'unix', 'virtualization']];
-   var data07_3 =  [['communication skill',
-   'communication skill',
-   'software development'],
-   ['documentation', 'documentation', 'project management'],
-   ['sql', 'software development', 'leadership'],
-   ['software development', 'sql', 'software development life cycle'],
-   ['java', 'java', 'documentation'],
-   ['oracle', 'software development life cycle', 'requirement analysis'],
-   ['software development life cycle', 'oracle', 'agile'],
-   ['information technology', 'project management', 'oracle'],
-   ['reporting', 'information system', 'communication skill'],
-   ['project management',
-   'information technology',
-   'system integration testing'],
-   ['information system', 'reporting', 'unix'],
-   ['application development', 'troubleshooting', 'integration testing'],
-   ['javascript', 'problem solving', 'scrum'],
-   ['html', 'business requirement', 'routing'],
-   ['business requirement', 'application development', 'reporting'],
-   ['problem solving', 'web service', 'troubleshooting'],
-   ['sql server', 'sql server', 'team management'],
-   ['troubleshooting', 'programming language', 'solaris'],
-   ['writing', 'scripting', 'telecommunication'],
-   ['web service', 'javascript', 'word']];
-   var data08_3 = [['communication skill',
-   'communication skill',
-   'communication skill'],
-   ['documentation', 'marketing', 'leadership'],
-   ['information system', 'information system', 'reporting'],
-   ['marketing', 'business development', 'project management'],
-   ['excel', 'reporting', 'marketing'],
-   ['reporting', 'documentation', 'problem solving'],
-   ['project management', 'leadership', 'risk management'],
-   ['word', 'sql', 'excel'],
-   ['crm', 'consulting', 'business development'],
-   ['problem solving', 'oracle', 'consulting'],
-   ['business development', 'software development', 'information system'],
-   ['sql', 'project management', 'product development'],
-   ['data analytics', 'agile', 'software development'],
-   ['leadership', 'sap', 'java'],
-   ['requirement gathering', 'business process', 'service delivery'],
-   ['information technology', 'crm', 'crm'],
-   ['troubleshooting', 'information technology', 'account management'],
-   ['sale process', 'business requirement', 'component'],
-   ['consulting', 'software development life cycle', 'business requirement'],
-   ['software development', 'java', 'automation']];
-   var data09_3 = [['business requirement', 'communication skill', 'agile'],
-   ['communication skill', 'business requirement', 'leadership'],
-   ['documentation', 'business process', 'business requirement'],
-   ['software development', 'documentation', 'information system'],
-   ['business process',
-   'information system',
-   'software development life cycle'],
-   ['sql', 'sql', 'software development'],
-   ['software development life cycle',
-   'software development',
-   'business analysis'],
-   ['information system', 'functional specification', 'reporting'],
-   ['requirement gathering', 'reporting', 'continuous improvement'],
-   ['information technology', 'business analysis', 'business process'],
-   ['java', 'software development life cycle', 'project management'],
-   ['project management', 'project management', 'communication skill'],
-   ['reporting', 'problem solving', 'data analytics'],
-   ['business analysis', 'information technology', 'documentation'],
-   ['problem solving', 'agile', 'user acceptance testing'],
-   ['functional specification', 'test case', 'technical skill'],
-   ['word', 'oracle', 'power point'],
-   ['excel', 'writing', 'excel'],
-   ['writing', 'sap', 'collaboration'],
-   ['oracle', 'requirement gathering', 'web service']];
-   var data10_3 = [['communication skill', 'automation', 'consulting'],
-   ['test case', 'communication skill', 'leadership'],
-   ['documentation', 'test case', 'automation'],
-   ['automation', 'java', 'communication skill'],
-   ['software development', 'documentation', 'information system'],
-   ['information system', 'reporting', 'sap'],
-   ['information technology', 'sql', 'project management'],
-   ['reporting', 'software development', 'crm'],
-   ['sql', 'agile', 'collaboration'],
-   ['java', 'scripting', 'information technology'],
-   ['qa', 'test automation', 'software development'],
-   ['agile', 'information system', 'test case'],
-   ['word', 'test execution', 'data management'],
-   ['quality assurance', 'selenium', 'test management'],
-   ['scripting', 'unix', 'test strategy'],
-   ['test execution', 'test strategy', 'test automation'],
-   ['software development life cycle', 'problem solving', 'erp'],
-   ['problem solving', 'web service', 'unix'],
-   ['excel', 'test management', 'problem solving'],
-   ['selenium', 'project management', 'java']];
-   var data11_3 = [['documentation',
-   'documentation',
-   'communication skill'],
-   ['troubleshooting', 'troubleshooting', 'leadership'],
-   ['firewall', 'communication skill', 'oracle'],
-   ['switch', 'switch', 'software development'],
-   ['router', 'firewall', 'project management'],
-   ['communication skill', 'router', 'information system'],
-   ['information system', 'information system', 'big data'],
-   ['routing', 'routing', 'consulting'],
-   ['information technology', 'ip', 'problem solving'],
-   ['wan', 'wan', 'reporting'],
-   ['ip', 'problem solving', 'writing'],
-   ['ccna', 'wireless', 'relational database'],
-   ['wireless', 'access', 'data warehousing'],
-   ['access', 'juniper', 'business process'],
-   ['word', 'ospf', 'professional service'],
-   ['vpn', 'ccnp', 'sql server'],
-   ['juniper', 'reporting', 'web service'],
-   ['project management', 'dns', 'design pattern'],
-   ['technical support',
-   'project management',
-   'software development life cycle'],
-   ['problem solving', 'vpn', 'information technology']];
-   var data12_3 = [['javascript', 'javascript', 'business process'],
-   ['html', 'html', 'business requirement'],
-   ['cs', 'cs', 'functional specification'],
-   ['web application', 'java', 'communication skill'],
-   ['jquery', 'sql', 'oracle'],
-   ['java', 'documentation', 'gap analysis'],
-   ['sql', 'communication skill', 'team building'],
-   ['php', 'software development', 'cm'],
-   ['web development', 'information system', 'business analysis'],
-   ['information technology', 'web service', 'sla'],
-   ['communication skill', 'jquery', 'reporting'],
-   ['documentation', 'agile', 'information system'],
-   ['software development', 'oracle', 'business development'],
-   ['front-end', 'web application', 'telecommunication'],
-   ['ajax', 'object oriented', 'marketing'],
-   ['user interface', 'ajax', 'leadership'],
-   ['application development', 'scripting', 'consulting'],
-   ['mysql', 'php', 'sql'],
-   ['mvc', 'xml', 'erp'],
-   ['agile', 'information technology', 'agile']];
-   var data13_3 = [['sql', 'communication skill', 'communication skill'],
-   ['communication skill', 'sql', 'project management'],
-   ['reporting', 'documentation', 'leadership'],
-   ['documentation', 'oracle', 'reporting'],
-   ['information system', 'reporting', 'information system'],
-   ['software development', 'etl', 'documentation'],
-   ['troubleshooting', 'project management', 'java'],
-   ['information technology', 'problem solving', 'software development'],
-   ['business requirement', 'information technology', 'problem solving'],
-   ['project management', 'business requirement', 'sap'],
-   ['excel', 'software development', 'm project'],
-   ['scripting', 'information system', 'business development'],
-   ['problem solving', 'business intelligence', 'crm'],
-   ['etl', 'sql server', 'vmware'],
-   ['data analytics', 'word', 'access'],
-   ['oracle', 'component', 'marketing'],
-   ['java', 'data analytics', 'consulting'],
-   ['word', 'consulting', 'business requirement'],
-   ['business intelligence', 'sap', 'automation'],
-   ['writing', 'business process', 'network security']];
-   var data14_3 = [['communication skill', 'communication skill', 'leadership'],
-   ['documentation', 'information system', 'reporting'],
-   ['computer security', 'documentation', 'communication skill'],
-   ['problem solving', 'software development', 'problem solving'],
-   ['information system', 'reporting', 'project management'],
-   ['information technology', 'computer security', 'documentation'],
-   ['firewall', 'consulting', 'agile'],
-   ['sql', 'sql', 'collaboration'],
-   ['troubleshooting', 'project management', 'power point'],
-   ['software development', 'information security', 'java'],
-   ['cissp', 'troubleshooting', 'software development'],
-   ['project management', 'business process', 'business process'],
-   ['java', 'problem solving', 'optimization'],
-   ['reporting', 'business requirement', 'business development'],
-   ['scripting', 'access', 'marketing'],
-   ['operating system', 'java', 'word'],
-   ['information security', 'agile', 'excel'],
-   ['word', 'scripting', 'sql'],
-   ['unix', 'firewall', 'jira'],
-   ['web application', 'leadership', 'operation management']]
-   var data15_3 = [['information system',
-   'communication skill',
-   'leadership'],
-   ['communication skill', 'business requirement', 'project management'],
-   ['reporting', 'reporting', 'communication skill'],
-   ['documentation', 'project management', 'marketing'],
-   ['information technology', 'problem solving', 'sla'],
-   ['project management', 'sap', 'reporting'],
-   ['marketing', 'documentation', 'information system'],
-   ['access', 'sql', 'data analytics'],
-   ['excel', 'leadership', 'vpn'],
-   ['word', 'it audit', 'data center'],
-   ['scripting', 'writing', 'it management'],
-   ['writing', 'access', 'routing'],
-   ['sql', 'javascript', 'collaboration'],
-   ['troubleshooting', 'information system', 'software development life cycle'],
-   ['software development', 'information technology', 'product development'],
-   ['it audit', 'troubleshooting', 'software development'],
-   ['computer security', 'business process', 'iso'],
-   ['m project', 'word', 'stakeholder management'],
-   ['data analytics', 'application development', 'business process'],
-   ['service delivery', 'computer security', 'product management']];
-   var data16_3 =  [['communication skill',
-   'communication skill',
-   'leadership'],
-   ['documentation', 'documentation', 'communication skill'],
-   ['software development', 'sql', 'consulting'],
-   ['sql', 'information system', 'business requirement'],
-   ['troubleshooting', 'project management', 'reporting'],
-   ['information system', 'reporting', 'marketing'],
-   ['problem solving', 'oracle', 'project management'],
-   ['java', 'pre-sales', 'documentation'],
-   ['reporting', 'software development', 'business process'],
-   ['word', 'java', 'collaboration'],
-   ['information technology', 'marketing', 'sap'],
-   ['project management', 'leadership', 'information system'],
-   ['oracle', 'business requirement', 'm project'],
-   ['operating system', 'consulting', 'vmware'],
-   ['business requirement', 'sap', 'account management'],
-   ['component', 'software development life cycle', 'automation'],
-   ['excel', 'problem solving', 'system design'],
-   ['web service', 'scripting', 'writing'],
-   ['software development life cycle', 'big data', 'material'],
-   ['pre-sales', 'business process', 'business development']];
-   var data17_3 = [['troubleshooting', 'communication skill', 'service delivery'],
-   ['communication skill', 'oracle', 'consulting'],
-   ['information technology', 'sap', 'itil'],
-   ['problem solving', 'information system', 'service management'],
-   ['word', 'documentation', 'sap'],
-   ['information system', 'consulting', 'software development life cycle'],
-   ['operating system', 'business process', 'collaboration'],
-   ['documentation', 'reporting', 'reporting'],
-   ['technical support', 'sql', 'communication skill'],
-   ['excel', 'information technology', 'leadership'],
-   ['itil', 'writing', 'project management'],
-   ['service delivery', 'business requirement', 'software development'],
-   ['microsoft office', 'project management', 'documentation'],
-   ['service desk', 'leadership', 'information system'],
-   ['computer security', 'troubleshooting', 'debugging'],
-   ['project management', 'software development', 'outlook'],
-   ['power point', 'service delivery', 'pmp'],
-   ['access', 'unix', 'problem solving'],
-   ['outlook', 'technical support', 'abap'],
-   ['sla', 'javascript', 'system design']];
-   var data18_3 = [['communication skill',
-   'communication skill',
-   'project management'],
-   ['information system', 'project management', 'reporting'],
-   ['troubleshooting', 'documentation', 'leadership'],
-   ['documentation', 'information system', 'communication skill'],
-   ['sql', 'reporting', 'information system'],
-   ['information technology',
-   'information technology',
-   'information technology'],
-   ['reporting', 'leadership', 'consulting'],
-   ['project management', 'software development', 'data center'],
-   ['software development', 'troubleshooting', 'problem solving'],
-   ['word', 'sql', 'data management'],
-   ['leadership', 'sap', 'agile'],
-   ['java', 'itil', 'marketing'],
-   ['business process', 'collaboration', 'software development'],
-   ['marketing', 'problem solving', 'data warehousing'],
-   ['writing', 'supply chain', 'stakeholder management'],
-   ['access', 'agile', 'procurement'],
-   ['firewall', 'oracle', 'management consulting'],
-   ['software development life cycle', 'component', 'operating system'],
-   ['html', 'procurement', 'sql'],
-   ['problem solving', 'consulting', 'web service']];
-   var data19_3 = [['io', 'agile', 'git'],
-   ['mobile application', 'software development', 'agile'],
-   ['android', 'mobile application', 'scrum'],
-   ['java', 'io', 'scripting'],
-   ['objective c', 'communication skill', 'problem solving'],
-   ['application development', 'java', 'process management'],
-   ['web service', 'android', 'ant'],
-   ['javascript', 'automation', 'unix'],
-   ['software development', 'mobile development', 'design development'],
-   ['swift', 'application development', 'virtualization'],
-   ['mobile development', 'rest', 'system administration'],
-   ['usability', 'objective c', 'linux'],
-   ['information technology', 'documentation', 'design implementation'],
-   ['communication skill', 'scrum', 'java'],
-   ['agile', 'json', 'vmware'],
-   ['html', 'business requirement', 'python'],
-   ['information system', 'information system', 'mongodb'],
-   ['debugging', 'leadership', 'automation'],
-   ['programming language', 'consulting', 'maven'],
-   ['user interface', 'project management', 'bash']];
-   var data20_3 = [['python', 'hadoop', 'apache'],
-   ['machine learning', 'java', 'hadoop'],
-   ['hadoop', 'python', 'leadership'],
-   ['java', 'machine learning', 'mongodb'],
-   ['data analytics', 'communication skill', 'big data'],
-   ['big data', 'big data', 'relational database'],
-   ['communication skill', 'algorithm', 'mapreduce'],
-   ['sql', 'statistic', 'nodejs'],
-   ['statistic', 'sql', 'cluster'],
-   ['information system', 'mapreduce', 'documentation'],
-   ['algorithm', 'data analytics', 'writing'],
-   ['problem solving', 'math', 'network administration'],
-   ['software development', 'leadership', 'social networking'],
-   ['scripting', 'project management', 'centos'],
-   ['documentation', 'apache', 'system administration'],
-   ['math', 'information system', 'data migration'],
-   ['agile', 'marketing', 'mentoring'],
-   ['marketing', 'software development', 'ubuntu'],
-   ['component', 'optimization', 'linux'],
-   ['project management', 'cluster', 'performance management']];
-   var data21_3 = [['communication skill', 'reporting', 'leadership'],
-   ['information technology', 'word', 'consulting'],
-   ['documentation', 'information technology', 'linux'],
-   ['troubleshooting', 'iso', 'account management'],
-   ['software development', 'business process', 'marketing'],
-   ['problem solving', 'computer security', 'communication skill'],
-   ['computer security', 'service delivery', 'business process'],
-   ['project management', 'procurement', 'business development'],
-   ['technical support', 'information system', 'data analytics'],
-   ['disaster recovery', 'communication skill', 'crm'],
-   ['information security', 'leadership', 'continuous improvement'],
-   ['database design', 'risk management', 'system engineering'],
-   ['information system', 'project management', 'firewall'],
-   ['sql', 'cissp', 'ip'],
-   ['reporting', 'problem solving', 'intrusion detection'],
-   ['leadership', 'writing', 'quality control'],
-   ['debugging', 'process improvement', 'troubleshooting'],
-   ['tcp/ip', 'information security', 'system design'],
-   ['word', 'emerging technology', 'writing'],
-   ['it operation', 'supply chain', 'sap']];
-   var data22_3 =[['communication skill', 'agile', 'consulting'],
-   ['linux', 'communication skill', 'information system'],
-   ['java', 'software development', 'leadership'],
-   ['agile', 'scripting', 'crm'],
-   ['sql', 'python', 'sap'],
-   ['information system', 'automation', 'agile'],
-   ['troubleshooting', 'java', 'word'],
-   ['python', 'reporting', 'project management'],
-   ['scripting', 'leadership', 'data analytics'],
-   ['problem solving', 'information system', 'excel'],
-   ['reporting', 'project management', 'power point'],
-   ['oracle', 'scrum', 'scrum'],
-   ['automation', 'component', 'communication skill'],
-   ['software development', 'oracle', 'software development'],
-   ['javascript', 'git', 'erp'],
-   ['information technology', 'information technology', 'collaboration'],
-   ['web service', 'consulting', 'project planning'],
-   ['component', 'linux', 'm project'],
-   ['documentation', 'ruby', 'virtualization'],
-   ['puppet', 'software engineering', 'problem solving']];
-   var data23_3 =  [['sql', 'sql', 'data management'],
-   ['oracle', 'oracle', 'sql'],
-   ['communication skill', 'database administration', 'software development'],
-   ['troubleshooting', 'troubleshooting', 'consulting'],
-   ['database administration', 'sql server', 'documentation'],
-   ['scripting', 'communication skill', 'database administration'],
-   ['information system', 'performance tuning', 'business intelligence'],
-   ['mysql', 'replication', 'hadoop'],
-   ['reporting', 'unix', 'teamwork'],
-   ['performance tuning', 'optimization', 'database design'],
-   ['unix', 'scripting', 'reporting'],
-   ['problem solving', 'documentation', 'disaster recovery'],
-   ['linux', 'information system', 'database management'],
-   ['database design', 'problem solving', 'oracle'],
-   ['sql server', 'technical support', 'jira'],
-   ['technical support', 'relational database', 'problem solving'],
-   ['documentation', 'itil', 'upstream'],
-   ['relational database', 'linux', 'system design'],
-   ['replication', 'access', 'linux'],
-   ['operating system', 'disaster recovery', 'vmware']];
-   var data24_3 = [['html', 'communication skill', 'leadership'],
-   ['communication skill', 'reporting', 'consulting'],
-   ['photoshop', 'leadership', 'problem solving'],
-   ['user experience', 'documentation', 'it strategy'],
-   ['illustrator', 'problem solving', 'communication skill'],
-   ['documentation', 'sql', 'design development'],
-   ['javascript', 'html', 'account management'],
-   ['wireframes', 'information system', 'information technology'],
-   ['software development', 'cs', 'business development'],
-   ['cs', 'sap', 'erp'],
-   ['agile', 'interaction design', 'writing'],
-   ['user interface', 'software development', 'information system'],
-   ['information system', 'javascript', 'marketing'],
-   ['usability', 'photoshop', 'collaboration'],
-   ['visual design', 'user interface', 'reporting'],
-   ['mobile application', 'consulting', 'project management'],
-   ['marketing', 'agile', 'it operation'],
-   ['web design', 'java', 'debugging'],
-   ['user research', 'project management', 'solaris'],
-   ['design principle', 'illustrator', 'web service']];
-   var data25_3 = [['marketing', 'communication skill', 'git'],
-   ['communication skill', 'consulting', 'erp'],
-   ['microsoft office', 'sap', 'product development'],
-   ['social medium', 'data management', 'design pattern'],
-   ['documentation', 'information system', 'python'],
-   ['reporting', 'rest', 'mongodb'],
-   ['troubleshooting', 'word', 'javascript'],
-   ['lead generation', 'project management', 'saas'],
-   ['excel', 'sql', 'programming language'],
-   ['writing', 'documentation', 'scalability'],
-   ['automation', 'gap analysis', 'web service'],
-   ['component', 'data modeling', 'mvc'],
-   ['leadership', 'design development', 'leadership'],
-   ['crm', 'leadership', 'distributed system'],
-   ['html', 'problem solving', 'html'],
-   ['information system', 'business requirement', 'sap'],
-   ['business development', 'optimization', 'b2b'],
-   ['information technology', 'functional specification', 'crm'],
-   ['sql', 'software engineering', ' '],
-   ['agile', 'apex', ' ']];
-   var data26_3 = [['communication skill', 'communication skill', 'excel'],
-   ['software development', 'marketing', 'business development'],
-   ['marketing', 'problem solving', 'marketing'],
-   ['reporting', 'project management', 'leadership'],
-   ['documentation', 'documentation', 'communication skill'],
-   ['sql', 'product management', 'product development'],
-   ['problem solving', 'sql', 'account management'],
-   ['automation', 'agile', 'sale engineering'],
-   ['troubleshooting', 'leadership', 'software development life cycle'],
-   ['product management', 'software development', 'information technology'],
-   ['business requirement', 'writing', 'software development'],
-   ['java', 'product launch', 'computer security'],
-   ['component', 'product development', 'technical support'],
-   ['project management', 'm office', 'reporting'],
-   ['information system', 'excel', 'sql'],
-   ['vmware', 'unix', 'procurement'],
-   ['product development', 'sap', 'it management'],
-   ['requirement gathering', 'quality assurance', 'business application'],
-   ['software development life cycle', 'javascript', 'human resource'],
-   ['collaboration', 'component', 'mobile device']];
-   var data27_3 = [['software development',
-   'documentation',
-   'business strategy'],
-   ['documentation', 'troubleshooting', 'software development'],
-   ['embedded system', 'communication skill', 'consulting'],
-   ['embedded software', 'word', 'erp'],
-   ['word', 'project management', 'it strategy'],
-   ['troubleshooting', 'information system', 'program management'],
-   ['automation', 'data center', 'agile'],
-   ['communication skill', 'system design', 'management consulting'],
-   ['operating system', 'embedded system', 'material'],
-   ['electrical engineering', 'reporting', 'team management'],
-   ['scripting', 'automation', 'project delivery'],
-   ['information system', 'writing', 'prince2'],
-   ['design implementation', 'telecommunication', 'pmo'],
-   ['writing', 'technical skill', ' '],
-   ['linux', 'software development', ' '],
-   ['development tool', 'unix', ' '],
-   ['sql', 'technical support', ' '],
-   ['software development life cycle', 'firmware', ' '],
-   ['problem solving', 'procurement', ' '],
-   ['integration testing', 'eda', ' ']];
+  
+
+
+var data01_3 = [['sql', 'java', 'leadership'],
+['java', 'communication skill', 'software development'],
+['software development', 'software development', 'java'],
+['documentation', 'sql', 'communication skill'],
+['communication skill', 'documentation', 'agile'],
+['html', 'javascript', 'reporting'],
+['c#', 'agile', 'information system'],
+['javascript', 'information system', 'project management'],
+['oracle', 'oracle', 'application development'],
+['application development', 'html', 'sql'],
+['information technology',
+'software development life cycle',
+'software development life cycle'],
+['information system', 'problem solving', 'problem solving'],
+['web service', 'spring', 'documentation'],
+['software development life cycle', 'reporting', 'web service'],
+['web application', 'web service', 'consulting'],
+['agile', 'application development', 'linux'],
+['sql server', 'project management', 'business requirement'],
+['problem solving', 'component', 'component'],
+['spring', 'jquery', 'automation'],
+['cs', 'scripting', 'html']];
+var data02_3 = [['communication skill', 'sap', 'communication skill'],
+['documentation', 'communication skill', 'leadership'],
+['sap', 'information system', 'information system'],
+['sql', 'consulting', 'software development'],
+['information system', 'sql', 'oracle'],
+['software development', 'oracle', 'sap'],
+['reporting', 'documentation', 'sql'],
+['information technology', 'business process', 'business requirement'],
+['java', 'business requirement', 'documentation'],
+['oracle', 'java', 'software development life cycle'],
+['troubleshooting', 'reporting', 'consulting'],
+['problem solving', 'word', 'project management'],
+['word', 'software development', 'information technology'],
+['business requirement', 'project management', 'business process'],
+['project management', 'problem solving', 'agile'],
+['consulting', 'leadership', 'problem solving'],
+['scripting', 'troubleshooting', 'reporting'],
+['unix', 'information technology', 'java'],
+['business process', 'unix', 'crm'],
+['software development life cycle', 'scripting', 'technical support']];
+var data03_3 =  [['troubleshooting',
+'communication skill',
+'project management'],
+['communication skill', 'documentation', 'leadership'],
+['documentation', 'information system', 'problem solving'],
+['sql', 'sql', 'communication skill'],
+['information technology', 'troubleshooting', 'documentation'],
+['information system', 'scripting', 'reporting'],
+['operating system', 'linux', 'software development'],
+['active directory', 'java', 'oracle'],
+['linux', 'project management', 'itil'],
+['firewall', 'reporting', 'writing'],
+['problem solving', 'leadership', 'troubleshooting'],
+['scripting', 'oracle', 'virtualization'],
+['vmware', 'unix', 'vmware'],
+['technical support', 'automation', 'consulting'],
+['project management', 'information technology', 'business development'],
+['word', 'problem solving', 'linux'],
+['java', 'software development', 'm project'],
+['reporting', 'vmware', 'talent acquisition'],
+['router', 'operating system', 'active directory'],
+['software development', 'component', 'information system']];
+var data04_3 = [['project management',
+'project management',
+'project management'],
+['communication skill', 'communication skill', 'communication skill'],
+['documentation', 'reporting', 'reporting'],
+['information technology', 'information system', 'leadership'],
+['reporting', 'leadership', 'software development'],
+['sql', 'documentation', 'stakeholder management'],
+['information system', 'software development', 'agile'],
+['software development', 'information technology', 'consulting'],
+['word', 'pmp', 'documentation'],
+['problem solving', 'sap', 'information system'],
+['pmp', 'software development life cycle', 'pmp'],
+['agile', 'sql', 'software development life cycle'],
+['troubleshooting', 'agile', 'information technology'],
+['leadership', 'business process', 'problem solving'],
+['business requirement', 'java', 'business process'],
+['java', 'problem solving', 'risk management'],
+['excel', 'consulting', 'project delivery'],
+['oracle', 'application development', 'marketing'],
+['software development life cycle',
+'business requirement',
+'application development'],
+['consulting', 'oracle', 'sap']];
+var data05_3 = [['communication skill',
+'communication skill',
+'communication skill'],
+['documentation', 'documentation', 'leadership'],
+['troubleshooting', 'information system', 'consulting'],
+['sql', 'java', 'project management'],
+['linux', 'sql', 'software development'],
+['information system', 'project management', 'java'],
+['information technology', 'leadership', 'reporting'],
+['project management', 'software development', 'component'],
+['problem solving', 'information technology', 'problem solving'],
+['java', 'reporting', 'business requirement'],
+['software development', 'oracle', 'information system'],
+['reporting', 'business requirement', 'documentation'],
+['vmware', 'consulting', 'web service'],
+['operating system', 'linux', 'agile'],
+['technical support', 'agile', 'javascript'],
+['word', 'scripting', 'enterprise architecture'],
+['automation', 'troubleshooting', 'business process'],
+['oracle', 'problem solving', 'software design'],
+['scripting', 'sap', 'information technology'],
+['firewall', 'component', 'continuous improvement']];
+var data06_3 = [['troubleshooting',
+'communication skill',
+'leadership'],
+['communication skill', 'documentation', 'business requirement'],
+['documentation', 'troubleshooting', 'project management'],
+['information technology', 'information system', 'information system'],
+['information system', 'reporting', 'communication skill'],
+['word', 'project management', 'business development'],
+['operating system', 'sql', 'agile'],
+['technical support', 'problem solving', 'reporting'],
+['reporting', 'java', 'information technology'],
+['problem solving', 'scripting', 'software development'],
+['software development', 'linux', 'java'],
+['sql', 'software development', 'automation'],
+['access', 'technical support', 'writing'],
+['project management', 'business requirement', 'account management'],
+['microsoft office', 'oracle', 'software development life cycle'],
+['java', 'agile', 'application development'],
+['component', 'root cause analysis', 'managed service'],
+['linux', 'software development life cycle', 'sap'],
+['html', 'information technology', 'oracle'],
+['excel', 'unix', 'virtualization']];
+var data07_3 =  [['communication skill',
+'communication skill',
+'software development'],
+['documentation', 'documentation', 'project management'],
+['sql', 'software development', 'leadership'],
+['software development', 'sql', 'software development life cycle'],
+['java', 'java', 'documentation'],
+['oracle', 'software development life cycle', 'requirement analysis'],
+['software development life cycle', 'oracle', 'agile'],
+['information technology', 'project management', 'oracle'],
+['reporting', 'information system', 'communication skill'],
+['project management',
+'information technology',
+'system integration testing'],
+['information system', 'reporting', 'unix'],
+['application development', 'troubleshooting', 'integration testing'],
+['javascript', 'problem solving', 'scrum'],
+['html', 'business requirement', 'routing'],
+['business requirement', 'application development', 'reporting'],
+['problem solving', 'web service', 'troubleshooting'],
+['sql server', 'sql server', 'team management'],
+['troubleshooting', 'programming language', 'solaris'],
+['writing', 'scripting', 'telecommunication'],
+['web service', 'javascript', 'word']];
+var data08_3 = [['communication skill',
+'communication skill',
+'communication skill'],
+['documentation', 'marketing', 'leadership'],
+['information system', 'information system', 'reporting'],
+['marketing', 'business development', 'project management'],
+['excel', 'reporting', 'marketing'],
+['reporting', 'documentation', 'problem solving'],
+['project management', 'leadership', 'risk management'],
+['word', 'sql', 'excel'],
+['crm', 'consulting', 'business development'],
+['problem solving', 'oracle', 'consulting'],
+['business development', 'software development', 'information system'],
+['sql', 'project management', 'product development'],
+['data analytics', 'agile', 'software development'],
+['leadership', 'sap', 'java'],
+['requirement gathering', 'business process', 'service delivery'],
+['information technology', 'crm', 'crm'],
+['troubleshooting', 'information technology', 'account management'],
+['sale process', 'business requirement', 'component'],
+['consulting', 'software development life cycle', 'business requirement'],
+['software development', 'java', 'automation']];
+var data09_3 = [['business requirement', 'communication skill', 'agile'],
+['communication skill', 'business requirement', 'leadership'],
+['documentation', 'business process', 'business requirement'],
+['software development', 'documentation', 'information system'],
+['business process',
+'information system',
+'software development life cycle'],
+['sql', 'sql', 'software development'],
+['software development life cycle',
+'software development',
+'business analysis'],
+['information system', 'functional specification', 'reporting'],
+['requirement gathering', 'reporting', 'continuous improvement'],
+['information technology', 'business analysis', 'business process'],
+['java', 'software development life cycle', 'project management'],
+['project management', 'project management', 'communication skill'],
+['reporting', 'problem solving', 'data analytics'],
+['business analysis', 'information technology', 'documentation'],
+['problem solving', 'agile', 'user acceptance testing'],
+['functional specification', 'test case', 'technical skill'],
+['word', 'oracle', 'power point'],
+['excel', 'writing', 'excel'],
+['writing', 'sap', 'collaboration'],
+['oracle', 'requirement gathering', 'web service']];
+var data10_3 = [['communication skill', 'automation', 'consulting'],
+['test case', 'communication skill', 'leadership'],
+['documentation', 'test case', 'automation'],
+['automation', 'java', 'communication skill'],
+['software development', 'documentation', 'information system'],
+['information system', 'reporting', 'sap'],
+['information technology', 'sql', 'project management'],
+['reporting', 'software development', 'crm'],
+['sql', 'agile', 'collaboration'],
+['java', 'scripting', 'information technology'],
+['qa', 'test automation', 'software development'],
+['agile', 'information system', 'test case'],
+['word', 'test execution', 'data management'],
+['quality assurance', 'selenium', 'test management'],
+['scripting', 'unix', 'test strategy'],
+['test execution', 'test strategy', 'test automation'],
+['software development life cycle', 'problem solving', 'erp'],
+['problem solving', 'web service', 'unix'],
+['excel', 'test management', 'problem solving'],
+['selenium', 'project management', 'java']];
+var data11_3 = [['documentation',
+'documentation',
+'communication skill'],
+['troubleshooting', 'troubleshooting', 'leadership'],
+['firewall', 'communication skill', 'oracle'],
+['switch', 'switch', 'software development'],
+['router', 'firewall', 'project management'],
+['communication skill', 'router', 'information system'],
+['information system', 'information system', 'big data'],
+['routing', 'routing', 'consulting'],
+['information technology', 'ip', 'problem solving'],
+['wan', 'wan', 'reporting'],
+['ip', 'problem solving', 'writing'],
+['ccna', 'wireless', 'relational database'],
+['wireless', 'access', 'data warehousing'],
+['access', 'juniper', 'business process'],
+['word', 'ospf', 'professional service'],
+['vpn', 'ccnp', 'sql server'],
+['juniper', 'reporting', 'web service'],
+['project management', 'dns', 'design pattern'],
+['technical support',
+'project management',
+'software development life cycle'],
+['problem solving', 'vpn', 'information technology']];
+var data12_3 = [['javascript', 'javascript', 'business process'],
+['html', 'html', 'business requirement'],
+['cs', 'cs', 'functional specification'],
+['web application', 'java', 'communication skill'],
+['jquery', 'sql', 'oracle'],
+['java', 'documentation', 'gap analysis'],
+['sql', 'communication skill', 'team building'],
+['php', 'software development', 'cm'],
+['web development', 'information system', 'business analysis'],
+['information technology', 'web service', 'sla'],
+['communication skill', 'jquery', 'reporting'],
+['documentation', 'agile', 'information system'],
+['software development', 'oracle', 'business development'],
+['front-end', 'web application', 'telecommunication'],
+['ajax', 'object oriented', 'marketing'],
+['user interface', 'ajax', 'leadership'],
+['application development', 'scripting', 'consulting'],
+['mysql', 'php', 'sql'],
+['mvc', 'xml', 'erp'],
+['agile', 'information technology', 'agile']];
+var data13_3 = [['sql', 'communication skill', 'communication skill'],
+['communication skill', 'sql', 'project management'],
+['reporting', 'documentation', 'leadership'],
+['documentation', 'oracle', 'reporting'],
+['information system', 'reporting', 'information system'],
+['software development', 'etl', 'documentation'],
+['troubleshooting', 'project management', 'java'],
+['information technology', 'problem solving', 'software development'],
+['business requirement', 'information technology', 'problem solving'],
+['project management', 'business requirement', 'sap'],
+['excel', 'software development', 'm project'],
+['scripting', 'information system', 'business development'],
+['problem solving', 'business intelligence', 'crm'],
+['etl', 'sql server', 'vmware'],
+['data analytics', 'word', 'access'],
+['oracle', 'component', 'marketing'],
+['java', 'data analytics', 'consulting'],
+['word', 'consulting', 'business requirement'],
+['business intelligence', 'sap', 'automation'],
+['writing', 'business process', 'network security']];
+var data14_3 = [['communication skill', 'communication skill', 'leadership'],
+['documentation', 'information system', 'reporting'],
+['computer security', 'documentation', 'communication skill'],
+['problem solving', 'software development', 'problem solving'],
+['information system', 'reporting', 'project management'],
+['information technology', 'computer security', 'documentation'],
+['firewall', 'consulting', 'agile'],
+['sql', 'sql', 'collaboration'],
+['troubleshooting', 'project management', 'power point'],
+['software development', 'information security', 'java'],
+['cissp', 'troubleshooting', 'software development'],
+['project management', 'business process', 'business process'],
+['java', 'problem solving', 'optimization'],
+['reporting', 'business requirement', 'business development'],
+['scripting', 'access', 'marketing'],
+['operating system', 'java', 'word'],
+['information security', 'agile', 'excel'],
+['word', 'scripting', 'sql'],
+['unix', 'firewall', 'jira'],
+['web application', 'leadership', 'operation management']]
+var data15_3 = [['information system',
+'communication skill',
+'leadership'],
+['communication skill', 'business requirement', 'project management'],
+['reporting', 'reporting', 'communication skill'],
+['documentation', 'project management', 'marketing'],
+['information technology', 'problem solving', 'sla'],
+['project management', 'sap', 'reporting'],
+['marketing', 'documentation', 'information system'],
+['access', 'sql', 'data analytics'],
+['excel', 'leadership', 'vpn'],
+['word', 'it audit', 'data center'],
+['scripting', 'writing', 'it management'],
+['writing', 'access', 'routing'],
+['sql', 'javascript', 'collaboration'],
+['troubleshooting', 'information system', 'software development life cycle'],
+['software development', 'information technology', 'product development'],
+['it audit', 'troubleshooting', 'software development'],
+['computer security', 'business process', 'iso'],
+['m project', 'word', 'stakeholder management'],
+['data analytics', 'application development', 'business process'],
+['service delivery', 'computer security', 'product management']];
+var data16_3 =  [['communication skill',
+'communication skill',
+'leadership'],
+['documentation', 'documentation', 'communication skill'],
+['software development', 'sql', 'consulting'],
+['sql', 'information system', 'business requirement'],
+['troubleshooting', 'project management', 'reporting'],
+['information system', 'reporting', 'marketing'],
+['problem solving', 'oracle', 'project management'],
+['java', 'pre-sales', 'documentation'],
+['reporting', 'software development', 'business process'],
+['word', 'java', 'collaboration'],
+['information technology', 'marketing', 'sap'],
+['project management', 'leadership', 'information system'],
+['oracle', 'business requirement', 'm project'],
+['operating system', 'consulting', 'vmware'],
+['business requirement', 'sap', 'account management'],
+['component', 'software development life cycle', 'automation'],
+['excel', 'problem solving', 'system design'],
+['web service', 'scripting', 'writing'],
+['software development life cycle', 'big data', 'material'],
+['pre-sales', 'business process', 'business development']];
+var data17_3 = [['troubleshooting', 'communication skill', 'service delivery'],
+['communication skill', 'oracle', 'consulting'],
+['information technology', 'sap', 'itil'],
+['problem solving', 'information system', 'service management'],
+['word', 'documentation', 'sap'],
+['information system', 'consulting', 'software development life cycle'],
+['operating system', 'business process', 'collaboration'],
+['documentation', 'reporting', 'reporting'],
+['technical support', 'sql', 'communication skill'],
+['excel', 'information technology', 'leadership'],
+['itil', 'writing', 'project management'],
+['service delivery', 'business requirement', 'software development'],
+['microsoft office', 'project management', 'documentation'],
+['service desk', 'leadership', 'information system'],
+['computer security', 'troubleshooting', 'debugging'],
+['project management', 'software development', 'outlook'],
+['power point', 'service delivery', 'pmp'],
+['access', 'unix', 'problem solving'],
+['outlook', 'technical support', 'abap'],
+['sla', 'javascript', 'system design']];
+var data18_3 = [['communication skill',
+'communication skill',
+'project management'],
+['information system', 'project management', 'reporting'],
+['troubleshooting', 'documentation', 'leadership'],
+['documentation', 'information system', 'communication skill'],
+['sql', 'reporting', 'information system'],
+['information technology',
+'information technology',
+'information technology'],
+['reporting', 'leadership', 'consulting'],
+['project management', 'software development', 'data center'],
+['software development', 'troubleshooting', 'problem solving'],
+['word', 'sql', 'data management'],
+['leadership', 'sap', 'agile'],
+['java', 'itil', 'marketing'],
+['business process', 'collaboration', 'software development'],
+['marketing', 'problem solving', 'data warehousing'],
+['writing', 'supply chain', 'stakeholder management'],
+['access', 'agile', 'procurement'],
+['firewall', 'oracle', 'management consulting'],
+['software development life cycle', 'component', 'operating system'],
+['html', 'procurement', 'sql'],
+['problem solving', 'consulting', 'web service']];
+var data19_3 = [['io', 'agile', 'git'],
+['mobile application', 'software development', 'agile'],
+['android', 'mobile application', 'scrum'],
+['java', 'io', 'scripting'],
+['objective c', 'communication skill', 'problem solving'],
+['application development', 'java', 'process management'],
+['web service', 'android', 'ant'],
+['javascript', 'automation', 'unix'],
+['software development', 'mobile development', 'design development'],
+['swift', 'application development', 'virtualization'],
+['mobile development', 'rest', 'system administration'],
+['usability', 'objective c', 'linux'],
+['information technology', 'documentation', 'design implementation'],
+['communication skill', 'scrum', 'java'],
+['agile', 'json', 'vmware'],
+['html', 'business requirement', 'python'],
+['information system', 'information system', 'mongodb'],
+['debugging', 'leadership', 'automation'],
+['programming language', 'consulting', 'maven'],
+['user interface', 'project management', 'bash']];
+var data20_3 = [['python', 'hadoop', 'apache'],
+['machine learning', 'java', 'hadoop'],
+['hadoop', 'python', 'leadership'],
+['java', 'machine learning', 'mongodb'],
+['data analytics', 'communication skill', 'big data'],
+['big data', 'big data', 'relational database'],
+['communication skill', 'algorithm', 'mapreduce'],
+['sql', 'statistic', 'nodejs'],
+['statistic', 'sql', 'cluster'],
+['information system', 'mapreduce', 'documentation'],
+['algorithm', 'data analytics', 'writing'],
+['problem solving', 'math', 'network administration'],
+['software development', 'leadership', 'social networking'],
+['scripting', 'project management', 'centos'],
+['documentation', 'apache', 'system administration'],
+['math', 'information system', 'data migration'],
+['agile', 'marketing', 'mentoring'],
+['marketing', 'software development', 'ubuntu'],
+['component', 'optimization', 'linux'],
+['project management', 'cluster', 'performance management']];
+var data21_3 = [['communication skill', 'reporting', 'leadership'],
+['information technology', 'word', 'consulting'],
+['documentation', 'information technology', 'linux'],
+['troubleshooting', 'iso', 'account management'],
+['software development', 'business process', 'marketing'],
+['problem solving', 'computer security', 'communication skill'],
+['computer security', 'service delivery', 'business process'],
+['project management', 'procurement', 'business development'],
+['technical support', 'information system', 'data analytics'],
+['disaster recovery', 'communication skill', 'crm'],
+['information security', 'leadership', 'continuous improvement'],
+['database design', 'risk management', 'system engineering'],
+['information system', 'project management', 'firewall'],
+['sql', 'cissp', 'ip'],
+['reporting', 'problem solving', 'intrusion detection'],
+['leadership', 'writing', 'quality control'],
+['debugging', 'process improvement', 'troubleshooting'],
+['tcp/ip', 'information security', 'system design'],
+['word', 'emerging technology', 'writing'],
+['it operation', 'supply chain', 'sap']];
+var data22_3 =[['communication skill', 'agile', 'consulting'],
+['linux', 'communication skill', 'information system'],
+['java', 'software development', 'leadership'],
+['agile', 'scripting', 'crm'],
+['sql', 'python', 'sap'],
+['information system', 'automation', 'agile'],
+['troubleshooting', 'java', 'word'],
+['python', 'reporting', 'project management'],
+['scripting', 'leadership', 'data analytics'],
+['problem solving', 'information system', 'excel'],
+['reporting', 'project management', 'power point'],
+['oracle', 'scrum', 'scrum'],
+['automation', 'component', 'communication skill'],
+['software development', 'oracle', 'software development'],
+['javascript', 'git', 'erp'],
+['information technology', 'information technology', 'collaboration'],
+['web service', 'consulting', 'project planning'],
+['component', 'linux', 'm project'],
+['documentation', 'ruby', 'virtualization'],
+['puppet', 'software engineering', 'problem solving']];
+var data23_3 =  [['sql', 'sql', 'data management'],
+['oracle', 'oracle', 'sql'],
+['communication skill', 'database administration', 'software development'],
+['troubleshooting', 'troubleshooting', 'consulting'],
+['database administration', 'sql server', 'documentation'],
+['scripting', 'communication skill', 'database administration'],
+['information system', 'performance tuning', 'business intelligence'],
+['mysql', 'replication', 'hadoop'],
+['reporting', 'unix', 'teamwork'],
+['performance tuning', 'optimization', 'database design'],
+['unix', 'scripting', 'reporting'],
+['problem solving', 'documentation', 'disaster recovery'],
+['linux', 'information system', 'database management'],
+['database design', 'problem solving', 'oracle'],
+['sql server', 'technical support', 'jira'],
+['technical support', 'relational database', 'problem solving'],
+['documentation', 'itil', 'upstream'],
+['relational database', 'linux', 'system design'],
+['replication', 'access', 'linux'],
+['operating system', 'disaster recovery', 'vmware']];
+var data24_3 = [['html', 'communication skill', 'leadership'],
+['communication skill', 'reporting', 'consulting'],
+['photoshop', 'leadership', 'problem solving'],
+['user experience', 'documentation', 'it strategy'],
+['illustrator', 'problem solving', 'communication skill'],
+['documentation', 'sql', 'design development'],
+['javascript', 'html', 'account management'],
+['wireframes', 'information system', 'information technology'],
+['software development', 'cs', 'business development'],
+['cs', 'sap', 'erp'],
+['agile', 'interaction design', 'writing'],
+['user interface', 'software development', 'information system'],
+['information system', 'javascript', 'marketing'],
+['usability', 'photoshop', 'collaboration'],
+['visual design', 'user interface', 'reporting'],
+['mobile application', 'consulting', 'project management'],
+['marketing', 'agile', 'it operation'],
+['web design', 'java', 'debugging'],
+['user research', 'project management', 'solaris'],
+['design principle', 'illustrator', 'web service']];
+var data25_3 = [['marketing', 'communication skill', 'git'],
+['communication skill', 'consulting', 'erp'],
+['microsoft office', 'sap', 'product development'],
+['social medium', 'data management', 'design pattern'],
+['documentation', 'information system', 'python'],
+['reporting', 'rest', 'mongodb'],
+['troubleshooting', 'word', 'javascript'],
+['lead generation', 'project management', 'saas'],
+['excel', 'sql', 'programming language'],
+['writing', 'documentation', 'scalability'],
+['automation', 'gap analysis', 'web service'],
+['component', 'data modeling', 'mvc'],
+['leadership', 'design development', 'leadership'],
+['crm', 'leadership', 'distributed system'],
+['html', 'problem solving', 'html'],
+['information system', 'business requirement', 'sap'],
+['business development', 'optimization', 'b2b'],
+['information technology', 'functional specification', 'crm'],
+['sql', 'software engineering', ' '],
+['agile', 'apex', ' ']];
+var data26_3 = [['communication skill', 'communication skill', 'excel'],
+['software development', 'marketing', 'business development'],
+['marketing', 'problem solving', 'marketing'],
+['reporting', 'project management', 'leadership'],
+['documentation', 'documentation', 'communication skill'],
+['sql', 'product management', 'product development'],
+['problem solving', 'sql', 'account management'],
+['automation', 'agile', 'sale engineering'],
+['troubleshooting', 'leadership', 'software development life cycle'],
+['product management', 'software development', 'information technology'],
+['business requirement', 'writing', 'software development'],
+['java', 'product launch', 'computer security'],
+['component', 'product development', 'technical support'],
+['project management', 'm office', 'reporting'],
+['information system', 'excel', 'sql'],
+['vmware', 'unix', 'procurement'],
+['product development', 'sap', 'it management'],
+['requirement gathering', 'quality assurance', 'business application'],
+['software development life cycle', 'javascript', 'human resource'],
+['collaboration', 'component', 'mobile device']];
+var data27_3 = [['software development',
+'documentation',
+'business strategy'],
+['documentation', 'troubleshooting', 'software development'],
+['embedded system', 'communication skill', 'consulting'],
+['embedded software', 'word', 'erp'],
+['word', 'project management', 'it strategy'],
+['troubleshooting', 'information system', 'program management'],
+['automation', 'data center', 'agile'],
+['communication skill', 'system design', 'management consulting'],
+['operating system', 'embedded system', 'material'],
+['electrical engineering', 'reporting', 'team management'],
+['scripting', 'automation', 'project delivery'],
+['information system', 'writing', 'prince2'],
+['design implementation', 'telecommunication', 'pmo'],
+['writing', 'technical skill', ' '],
+['linux', 'software development', ' '],
+['development tool', 'unix', ' '],
+['sql', 'technical support', ' '],
+['software development life cycle', 'firmware', ' '],
+['problem solving', 'procurement', ' '],
+['integration testing', 'eda', ' ']];
 
 // *************************
   // *************************
@@ -602,9 +604,9 @@
       headerCell.align="center";
       headerCell.innerHTML = position[0][i];
    //   if(i == 0 || i == 2 || i == 4){
-     headerCell.width = "400px";
-     headerCell.bgColor = "#c3ab65";
-     headerCell.height = "30px";
+    headerCell.width = "400px";
+    headerCell.bgColor = "#c3ab65";
+    headerCell.height = "30px";
    //  }
   //   else{
   //    headerCell.width = "70px";
@@ -617,18 +619,18 @@
     for (var i = 1; i < position.length; i++) {
       row = table.insertRow(-1);
       for (var j = 0; j < columnCount; j++) {
-       var cell = row.insertCell(-1);
-       cell.align="center";
-       cell.height = "30px";
+        var cell = row.insertCell(-1);
+        cell.align="center";
+        cell.height = "30px";
    //     if(j == 1 || j == 3 || j == 5){
    //       cell.bgColor = "#a58e68";
    //     }
    if(position[i][j]){
-   cell.innerHTML = position[i][j];
-}
-else{
-   cell.innerHTML = "-";
-}
+      cell.innerHTML = position[i][j];
+   }
+   else{
+      cell.innerHTML = "-";
+   }
    cell.className += "table-cell";
 }
 }
@@ -648,9 +650,9 @@ $( document ).ready(function() {
    $("#tablechart_div").hide();
    // click the button group
    $(".show-button-group").click(function() {
-     var $this = $(this);
+    var $this = $(this);
 
-     if(!$(this).hasClass('change-color')){
+    if(!$(this).hasClass('change-color')){
       $(this).addClass('change-color');
       $(".btn-group-customize").show();
       $(".selector-diff").each(function(i, obj){ 
@@ -670,18 +672,18 @@ $( document ).ready(function() {
       var $this = $(this);
       prepareDrawTable();
       if(!$(this).hasClass('change-color')){
-       $(this).addClass('change-color');
-       titles.push($this.val());
-       if(titles.length != 0)
-       {
+        $(this).addClass('change-color');
+        titles.push($this.val());
+        if(titles.length != 0)
+        {
          $("#tablechart_div").show();
       }
    }
    else{
-    $(this).removeClass('change-color');
-    titles.splice(-1,1);
+     $(this).removeClass('change-color');
+     titles.splice(-1,1);
 
-    if(titles.length == 0){
+     if(titles.length == 0){
       $("#tablechart_div").hide();
    }
 }
@@ -696,43 +698,43 @@ prepareDrawTable();
     $(".table-cell").click(function(){
       var $this = $(this);
       if(!$this.hasClass('change-color-table')){
-       $this.addClass('change-color-table');
-    }
-    else{
-       $this.removeClass('change-color-table');
-    }
+        $this.addClass('change-color-table');
+     }
+     else{
+        $this.removeClass('change-color-table');
+     }
 
- });
+  });
 
     // click the year button
     $(".year-button").click(function() {
       var $this = $(this);
       if(!$(this).hasClass('change-color')){
-       $(this).addClass('change-color');
-   }
-   else{
-    $(this).removeClass('change-color');}
- });
+        $(this).addClass('change-color');
+     }
+     else{
+        $(this).removeClass('change-color');}
+     });
  });// document.ready
 
 function prepareDrawTable(){
-  var total_array_j = [];
-  var total_array_m = [];
-  var total_array_s = [];
-  var j = [];
-  var m = [];
-  var s = [];
-  var counter_j = [];
-  var counter_m = [];
-  var counter_s = [];
+ var total_array_j = [];
+ var total_array_m = [];
+ var total_array_s = [];
+ var j = [];
+ var m = [];
+ var s = [];
+ var counter_j = [];
+ var counter_m = [];
+ var counter_s = [];
 
 // get data and count skills
 for(i = 0; i < titles.length; i++){
    index = parseInt(titles[i]);
    if(index != 25 && index != 12 && index != 19 && index != 24 && index != 1){
-   temp_array = data_total_3[index - 1]; 
-   for (t = 0; t < 20; t++){
-    if(j.indexOf(temp_array[t][0]) != -1){
+      temp_array = data_total_3[index - 1]; 
+      for (t = 0; t < 20; t++){
+        if(j.indexOf(temp_array[t][0]) != -1){
             // have element
             index2 = j.indexOf(temp_array[t][0]);
             counter_j[index2] += 1;
@@ -764,9 +766,9 @@ for(i = 0; i < titles.length; i++){
          }
       }
    }else{
-         temp_array = data_total_3[index - 1]; 
-   for (t = 0; t < 20; t++){
-    if(j.indexOf(temp_array[t][0]) != -1){
+      temp_array = data_total_3[index - 1]; 
+      for (t = 0; t < 20; t++){
+        if(j.indexOf(temp_array[t][0]) != -1){
             // have element
             index2 = j.indexOf(temp_array[t][0]);
             counter_j[index2] += 1;
@@ -788,22 +790,22 @@ for(i = 0; i < titles.length; i++){
          }
       }
    }
-   }
+}
 
 // assign - to undefined values
 for(i = 0; i < 10; i++){
-  var j_item = j[i];
-  var j_counter = counter_j[i];
+ var j_item = j[i];
+ var j_counter = counter_j[i];
 
-  var m_item = m[i];
-  var m_counter = counter_m[i];
+ var m_item = m[i];
+ var m_counter = counter_m[i];
 
-  var s_item = s[i];
-  var s_counter = counter_s[i];
+ var s_item = s[i];
+ var s_counter = counter_s[i];
 
-  total_array_j.push([j_item, j_counter]);
-  total_array_m.push([m_item, m_counter]);
-  total_array_s.push([s_item, s_counter]);
+ total_array_j.push([j_item, j_counter]);
+ total_array_m.push([m_item, m_counter]);
+ total_array_s.push([s_item, s_counter]);
 }
 
 var total_array2 = [];
@@ -811,10 +813,10 @@ if(titles.length != 1 && titles.length != 0){
 // sort by count desc
 var sorted_j = total_array_j.sort(function (a,b){
 
-  if (b[1] === a[1]) {
-    return b[0] < a[0] ? 1 : b[0] > a[0] ? -1 : 0;
- }
- return b[1] - a[1];
+ if (b[1] === a[1]) {
+  return b[0] < a[0] ? 1 : b[0] > a[0] ? -1 : 0;
+}
+return b[1] - a[1];
 
 
 });
@@ -822,19 +824,19 @@ console.log("sorted_j:");
 console.log(sorted_j);
 var sorted_m = total_array_m.sort(function (a,b){
 
-  if (b[1] === a[1]) {
-    return b[0] < a[0] ? 1 : b[0] > a[0] ? -1 : 0;
- }
- return b[1] - a[1];
+ if (b[1] === a[1]) {
+  return b[0] < a[0] ? 1 : b[0] > a[0] ? -1 : 0;
+}
+return b[1] - a[1];
 
 });
 console.log("sorted_M:");
 console.log(sorted_m);
 var sorted_s = total_array_s.sort(function (a,b){
- if (b[1] === a[1]) {
-    return b[0] < a[0] ? 1 : b[0] > a[0] ? -1 : 0;
- }
- return b[1] - a[1];
+  if (b[1] === a[1]) {
+     return b[0] < a[0] ? 1 : b[0] > a[0] ? -1 : 0;
+  }
+  return b[1] - a[1];
 });
 
 for (i = 0; i < 10; i++){
@@ -896,157 +898,157 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
      }
   };
   var data01 = new google.visualization.arrayToDataTable([
-    ['From', 'To', 'Weight'],
-    ['Software Developer', 'IT Analyst', 4.52],
-    ['Software Developer', 'EnterpriseSystem Architect', 2.02],
-    ['Software Developer', 'Web developer', 1.64],
-    ['Software Developer', 'IT Consultant ', 1.63],
-    ['Software Developer', 'Others (Devops r&d)', 1.53],
-    ['Software Developer', 'Data Analyst BI', 1.51],
-    ['Software Developer', 'Test', 1.26],
-    ['Software Developer', 'Business Consultant', 1.26],
-    ['Software Developer', 'Business Analyst', 1.24],
-    ['Software Developer', 'IT Manager', 1.13]
-    ]);
+     ['From', 'To', 'Weight'],
+     ['Software Developer', 'IT Analyst', 4.52],
+     ['Software Developer', 'EnterpriseSystem Architect', 2.02],
+     ['Software Developer', 'Web developer', 1.64],
+     ['Software Developer', 'IT Consultant ', 1.63],
+     ['Software Developer', 'Others (Devops r&d)', 1.53],
+     ['Software Developer', 'Data Analyst BI', 1.51],
+     ['Software Developer', 'Test', 1.26],
+     ['Software Developer', 'Business Consultant', 1.26],
+     ['Software Developer', 'Business Analyst', 1.24],
+     ['Software Developer', 'IT Manager', 1.13]
+     ]);
   var data02 = new google.visualization.arrayToDataTable([
-    ['From', 'To', 'Weight'],
-    ['IT Consultant ', 'Business Consultant', 5.43],
-    ['IT Consultant ', 'EnterpriseSystem Architect', 3.96],
-    ['IT Consultant ', 'IT Analyst', 3.25],
-    ['IT Consultant ', 'IT Manager', 3.18],
-    ['IT Consultant ', 'IT Operations', 3.05],
-    ['IT Consultant ', 'Business  Others (Accountant A', 3.03],
-    ['IT Consultant ', 'Data Analyst BI', 2.65],
-    ['IT Consultant ', 'Business Analyst', 2.25],
-    ['IT Consultant ', 'IT TechnicialSupport', 2.23],
-    ['IT Consultant ', 'Sales', 2.22]
-    ]);
+     ['From', 'To', 'Weight'],
+     ['IT Consultant ', 'Business Consultant', 5.43],
+     ['IT Consultant ', 'EnterpriseSystem Architect', 3.96],
+     ['IT Consultant ', 'IT Analyst', 3.25],
+     ['IT Consultant ', 'IT Manager', 3.18],
+     ['IT Consultant ', 'IT Operations', 3.05],
+     ['IT Consultant ', 'Business  Others (Accountant A', 3.03],
+     ['IT Consultant ', 'Data Analyst BI', 2.65],
+     ['IT Consultant ', 'Business Analyst', 2.25],
+     ['IT Consultant ', 'IT TechnicialSupport', 2.23],
+     ['IT Consultant ', 'Sales', 2.22]
+     ]);
   var data03 = new google.visualization.arrayToDataTable([
-    ['From', 'To', 'Weight'],
-    ['System  Administrator', 'EnterpriseSystem Architect', 5.43],
-    ['System  Administrator', 'IT TechnicialSupport', 5.29],
-    ['System  Administrator', 'IT Service', 2.88],
-    ['System  Administrator', 'IT Manager', 2.8],
-    ['System  Administrator', 'IT Operations', 2.2],
-    ['System  Administrator', 'IT Consultant ', 2.15],
-    ['System  Administrator', 'Business Consultant', 2.13],
-    ['System  Administrator', 'Business  Others (Accountant A', 2.07],
-    ['System  Administrator', 'IT Analyst', 1.73],
-    ['System  Administrator', 'Security', 1.57]
-    ]);      
+     ['From', 'To', 'Weight'],
+     ['System  Administrator', 'EnterpriseSystem Architect', 5.43],
+     ['System  Administrator', 'IT TechnicialSupport', 5.29],
+     ['System  Administrator', 'IT Service', 2.88],
+     ['System  Administrator', 'IT Manager', 2.8],
+     ['System  Administrator', 'IT Operations', 2.2],
+     ['System  Administrator', 'IT Consultant ', 2.15],
+     ['System  Administrator', 'Business Consultant', 2.13],
+     ['System  Administrator', 'Business  Others (Accountant A', 2.07],
+     ['System  Administrator', 'IT Analyst', 1.73],
+     ['System  Administrator', 'Security', 1.57]
+     ]);      
   var data04 = new google.visualization.arrayToDataTable([
-    ['From', 'To', 'Weight'],
-    ['Project Manager', 'IT Manager', 3.86],
-    ['Project Manager', 'IT Operations', 3.48],
-    ['Project Manager', 'Business Consultant', 2.91],
-    ['Project Manager', 'Business  Others (Accountant A', 2.57],
-    ['Project Manager', 'EnterpriseSystem Architect', 2.07],
-    ['Project Manager', 'IT Service', 2.04],
-    ['Project Manager', 'Product Manager', 1.97],
-    ['Project Manager', 'IT Consultant ', 1.94],
-    ['Project Manager', 'Sales', 1.94],
-    ['Project Manager', 'Business Analyst', 1.76]
-    ]);      
+     ['From', 'To', 'Weight'],
+     ['Project Manager', 'IT Manager', 3.86],
+     ['Project Manager', 'IT Operations', 3.48],
+     ['Project Manager', 'Business Consultant', 2.91],
+     ['Project Manager', 'Business  Others (Accountant A', 2.57],
+     ['Project Manager', 'EnterpriseSystem Architect', 2.07],
+     ['Project Manager', 'IT Service', 2.04],
+     ['Project Manager', 'Product Manager', 1.97],
+     ['Project Manager', 'IT Consultant ', 1.94],
+     ['Project Manager', 'Sales', 1.94],
+     ['Project Manager', 'Business Analyst', 1.76]
+     ]);      
   var data05 = new google.visualization.arrayToDataTable([
-    ['From', 'To', 'Weight'],
-    ['EnterpriseSystem Architect', 'System  Administrator', 5.43],
-    ['EnterpriseSystem Architect', 'IT Consultant ', 3.96],
-    ['EnterpriseSystem Architect', 'Business Consultant', 3.8],
-    ['EnterpriseSystem Architect', 'IT Manager', 3.49],
-    ['EnterpriseSystem Architect', 'IT Analyst', 3.26],
-    ['EnterpriseSystem Architect', 'IT TechnicialSupport', 3.13],
-    ['EnterpriseSystem Architect', 'IT Operations', 3.06],
-    ['EnterpriseSystem Architect', 'Business  Others (Accountant A', 2.7],
-    ['EnterpriseSystem Architect', 'IT Service', 2.65],
-    ['EnterpriseSystem Architect', 'Others (Devops r&d)', 2.54]
-    ]);      
+     ['From', 'To', 'Weight'],
+     ['EnterpriseSystem Architect', 'System  Administrator', 5.43],
+     ['EnterpriseSystem Architect', 'IT Consultant ', 3.96],
+     ['EnterpriseSystem Architect', 'Business Consultant', 3.8],
+     ['EnterpriseSystem Architect', 'IT Manager', 3.49],
+     ['EnterpriseSystem Architect', 'IT Analyst', 3.26],
+     ['EnterpriseSystem Architect', 'IT TechnicialSupport', 3.13],
+     ['EnterpriseSystem Architect', 'IT Operations', 3.06],
+     ['EnterpriseSystem Architect', 'Business  Others (Accountant A', 2.7],
+     ['EnterpriseSystem Architect', 'IT Service', 2.65],
+     ['EnterpriseSystem Architect', 'Others (Devops r&d)', 2.54]
+     ]);      
   var data06 = new google.visualization.arrayToDataTable([
-    ['From', 'To', 'Weight'],
-    ['IT Technicial Support', 'IT Service', 5.7],
-    ['IT Technicial Support', 'System  Administrator', 5.29],
-    ['IT Technicial Support', 'IT Manager', 3.24],
-    ['IT Technicial Support', 'EnterpriseSystem Architect', 3.13],
-    ['IT Technicial Support', 'Business  Others (Accountant A', 2.84],
-    ['IT Technicial Support', 'IT Operations', 2.58],
-    ['IT Technicial Support', 'Business Consultant', 2.38],
-    ['IT Technicial Support', 'IT Consultant ', 2.23],
-    ['IT Technicial Support', 'Sales', 2.07],
-    ['IT Technicial Support', 'IT Analyst', 1.61]
-    ]);      
+     ['From', 'To', 'Weight'],
+     ['IT Technicial Support', 'IT Service', 5.7],
+     ['IT Technicial Support', 'System  Administrator', 5.29],
+     ['IT Technicial Support', 'IT Manager', 3.24],
+     ['IT Technicial Support', 'EnterpriseSystem Architect', 3.13],
+     ['IT Technicial Support', 'Business  Others (Accountant A', 2.84],
+     ['IT Technicial Support', 'IT Operations', 2.58],
+     ['IT Technicial Support', 'Business Consultant', 2.38],
+     ['IT Technicial Support', 'IT Consultant ', 2.23],
+     ['IT Technicial Support', 'Sales', 2.07],
+     ['IT Technicial Support', 'IT Analyst', 1.61]
+     ]);      
   var data07 = new google.visualization.arrayToDataTable([
-    ['From', 'To', 'Weight'],
-    ['IT Analyst', 'Software Developer', 4.52],
-    ['IT Analyst', 'EnterpriseSystem Architect', 3.26],
-    ['IT Analyst', 'IT Consultant ', 3.25],
-    ['IT Analyst', 'Data Analyst BI', 2.78],
-    ['IT Analyst', 'Business Analyst', 2.33],
-    ['IT Analyst', 'Business Consultant', 2.28],
-    ['IT Analyst', 'IT Manager', 2.11],
-    ['IT Analyst', 'IT Operations', 1.77],
-    ['IT Analyst', 'Business  Others (Accountant A', 1.75],
-    ['IT Analyst', 'System  Administrator', 1.73]
-    ]);      
+     ['From', 'To', 'Weight'],
+     ['IT Analyst', 'Software Developer', 4.52],
+     ['IT Analyst', 'EnterpriseSystem Architect', 3.26],
+     ['IT Analyst', 'IT Consultant ', 3.25],
+     ['IT Analyst', 'Data Analyst BI', 2.78],
+     ['IT Analyst', 'Business Analyst', 2.33],
+     ['IT Analyst', 'Business Consultant', 2.28],
+     ['IT Analyst', 'IT Manager', 2.11],
+     ['IT Analyst', 'IT Operations', 1.77],
+     ['IT Analyst', 'Business  Others (Accountant A', 1.75],
+     ['IT Analyst', 'System  Administrator', 1.73]
+     ]);      
   var data08 = new google.visualization.arrayToDataTable([
-    ['From', 'To', 'Weight'],
-    ['Sales', 'Business  Others (Accountant A', 5.53],
-    ['Sales', 'Business Consultant', 4.24],
-    ['Sales', 'IT Operations', 3.66],
-    ['Sales', 'IT Manager', 3.36],
-    ['Sales', 'Product Manager', 2.66],
-    ['Sales', 'IT Service', 2.55],
-    ['Sales', 'Marketing', 2.27],
-    ['Sales', 'IT Consultant ', 2.22],
-    ['Sales', 'EnterpriseSystem Architect', 2.18],
-    ['Sales', 'IT TechnicialSupport', 2.07]
-    ]);      
+     ['From', 'To', 'Weight'],
+     ['Sales', 'Business  Others (Accountant A', 5.53],
+     ['Sales', 'Business Consultant', 4.24],
+     ['Sales', 'IT Operations', 3.66],
+     ['Sales', 'IT Manager', 3.36],
+     ['Sales', 'Product Manager', 2.66],
+     ['Sales', 'IT Service', 2.55],
+     ['Sales', 'Marketing', 2.27],
+     ['Sales', 'IT Consultant ', 2.22],
+     ['Sales', 'EnterpriseSystem Architect', 2.18],
+     ['Sales', 'IT TechnicialSupport', 2.07]
+     ]);      
   var data09 = new google.visualization.arrayToDataTable([
-    ['From', 'To', 'Weight'],
-    ['Business Analyst', 'IT Analyst', 2.33],
-    ['Business Analyst', 'IT Consultant ', 2.25],
-    ['Business Analyst', 'Business Consultant', 2.19],
-    ['Business Analyst', 'Data Analyst BI', 2.08],
-    ['Business Analyst', 'Project Manager', 1.76],
-    ['Business Analyst', 'IT Manager', 1.69],
-    ['Business Analyst', 'IT Operations', 1.69],
-    ['Business Analyst', 'EnterpriseSystem Architect', 1.6],
-    ['Business Analyst', 'Business  Others (Accountant A', 1.6],
-    ['Business Analyst', 'Test', 1.34]
-    ]);      
+     ['From', 'To', 'Weight'],
+     ['Business Analyst', 'IT Analyst', 2.33],
+     ['Business Analyst', 'IT Consultant ', 2.25],
+     ['Business Analyst', 'Business Consultant', 2.19],
+     ['Business Analyst', 'Data Analyst BI', 2.08],
+     ['Business Analyst', 'Project Manager', 1.76],
+     ['Business Analyst', 'IT Manager', 1.69],
+     ['Business Analyst', 'IT Operations', 1.69],
+     ['Business Analyst', 'EnterpriseSystem Architect', 1.6],
+     ['Business Analyst', 'Business  Others (Accountant A', 1.6],
+     ['Business Analyst', 'Test', 1.34]
+     ]);      
   var data10 = new google.visualization.arrayToDataTable([
-    ['From', 'To', 'Weight'],
-    ['Test', 'EnterpriseSystem Architect', 1.71],
-    ['Test', 'IT Consultant ', 1.61],
-    ['Test', 'Business Consultant', 1.6],
-    ['Test', 'Others (Devops r&d)', 1.58],
-    ['Test', 'Business  Others (Accountant A', 1.55],
-    ['Test', 'IT Analyst', 1.54],
-    ['Test', 'Data Analyst BI', 1.46],
-    ['Test', 'IT Manager', 1.43],
-    ['Test', 'IT Operations', 1.42],
-    ['Test', 'Business Analyst', 1.34]
-    ]);
+     ['From', 'To', 'Weight'],
+     ['Test', 'EnterpriseSystem Architect', 1.71],
+     ['Test', 'IT Consultant ', 1.61],
+     ['Test', 'Business Consultant', 1.6],
+     ['Test', 'Others (Devops r&d)', 1.58],
+     ['Test', 'Business  Others (Accountant A', 1.55],
+     ['Test', 'IT Analyst', 1.54],
+     ['Test', 'Data Analyst BI', 1.46],
+     ['Test', 'IT Manager', 1.43],
+     ['Test', 'IT Operations', 1.42],
+     ['Test', 'Business Analyst', 1.34]
+     ]);
   var data11 = new google.visualization.DataTable();
   data11.addColumn('string', 'Title');
   data11.addColumn('number', 'Count');
   data11.addRows([
-    ['Network Engineer', 1069],
-    ['Web developer', 871],
-    ['Data Analyst/ BI', 715],
-    ['Security', 672],
-    ['Business Consultant', 640],
-    ['Business - Others (Accountant, Audit etc.)', 640],
-    ['IT Manager', 476],
-    ['IT Service', 475],
-    ['Mobile developer', 466],
-    ['Others (Devops, r&d)', 396],
-    ['Data Scientist', 391],
-    ['IT Operations', 389],
-    ['Database Administrator', 376],
-    ['UI/UX', 278],
-    ['Marketing', 218],
-    ['Product Manager', 191],
-    ['Embedded  System Developer', 117]
-    ]);
+     ['Network Engineer', 1069],
+     ['Web developer', 871],
+     ['Data Analyst/ BI', 715],
+     ['Security', 672],
+     ['Business Consultant', 640],
+     ['Business - Others (Accountant, Audit etc.)', 640],
+     ['IT Manager', 476],
+     ['IT Service', 475],
+     ['Mobile developer', 466],
+     ['Others (Devops, r&d)', 396],
+     ['Data Scientist', 391],
+     ['IT Operations', 389],
+     ['Database Administrator', 376],
+     ['UI/UX', 278],
+     ['Marketing', 218],
+     ['Product Manager', 191],
+     ['Embedded  System Developer', 117]
+     ]);
   var data01_1 = new google.visualization.arrayToDataTable([
    ['Level', 'Count'],
    ['Junior', 3393], ['Middle', 1199], ['Senior', 101]
@@ -1155,17 +1157,17 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
    ['problem solving', 9.267, 3.93, 0.645, '']
    ]);       
   var data06_2 = new google.visualization.arrayToDataTable([
-    ['Skill', 'Junior', 'Middle', 'Senior', {role: 'annotation'} ],
-    ['troubleshooting', 35.366, 4.065, 0.136, ''],
-    ['communication skill', 19.851, 4.404, 0.068, ''],
-    ['documentation', 18.564, 2.913, 0.136, ''],
-    ['operating system', 14.499, 1.22, 0.0, ''],
-    ['information system', 13.957, 1.152, 0.136, ''],
-    ['problem solving', 7.724, 2.304, 0.0, ''],
-    ['reporting', 8.469, 1.355, 0.0, ''],
-    ['microsoft office', 8.469, 1.084, 0.068, ''],
-    ['linux', 5.42, 2.033, 0.068, '']
-    ])
+     ['Skill', 'Junior', 'Middle', 'Senior', {role: 'annotation'} ],
+     ['troubleshooting', 35.366, 4.065, 0.136, ''],
+     ['communication skill', 19.851, 4.404, 0.068, ''],
+     ['documentation', 18.564, 2.913, 0.136, ''],
+     ['operating system', 14.499, 1.22, 0.0, ''],
+     ['information system', 13.957, 1.152, 0.136, ''],
+     ['problem solving', 7.724, 2.304, 0.0, ''],
+     ['reporting', 8.469, 1.355, 0.0, ''],
+     ['microsoft office', 8.469, 1.084, 0.068, ''],
+     ['linux', 5.42, 2.033, 0.068, '']
+     ])
   var data07_2 = new google.visualization.arrayToDataTable([
    ['Skill', 'Junior', 'Middle', 'Senior', { role: 'annotation' } ],
    ['documentation', 22.507, 7.478, 0.733, ''],
@@ -1230,26 +1232,55 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
 
   
 
-              function drawPieChart_consultant() {
-               var piedata4 =  new google.visualization.arrayToDataTable([
-   ['Title', 'Count'],
-        ['SAP consultant', 9199],
-         ['Oracle consultant', 4154],
-         ['Generic IT Consultant', 14858]]);
-                 var options = {
-                  'title': 'IT Consultant Components',
-                  'width':800,
-                  'height':300,
-                  slices: {  
-                   0:{offset:0.05},
-                   1:{offset:0.05}, 
-                   2: {offset: 0.05},
-                }
-             };
-             var piechart4 = new google.visualization.PieChart(document.getElementById('piechart_consultant_div'));
-             piechart4.draw(piedata4, options);
+  function drawPieChart_consultant() {
+   var piedata4 =  new google.visualization.arrayToDataTable([
+      ['Title', 'Count'],
+      ['SAP consultant', 9199],
+      ['Oracle consultant', 4154],
+      ['Generic IT Consultant', 14858]]);
+   var options = {
+      'title': 'IT Consultant Segmentation',
+      'width':800,
+      'height':300,
+      slices: {  
+        0:{offset:0.05},
+        1:{offset:0.05}, 
+        2: {offset: 0.05},
+     }
+  };
+  var piechart4 = new google.visualization.PieChart(document.getElementById('piechart_consultant_div'));
+  piechart4.draw(piedata4, options);
+
+}
+
+function drawPieChart_softwareDeveloper() {
+   var piedata4 =  new google.visualization.arrayToDataTable([
+      ['Title', 'Count'],
+      ['Java/J2EE', 4154],
+      ['.NET', 2406],
+      ['Generic Software Developer', 18447],
+      ['C++/C#', 2372],
+      ['Sharepoint', 832]]);
+   var options = {
+      'title': 'Software Developer Segmentation',
+      'width':800,
+      'height':300,
+      slices: {  
+        0:{offset:0.05},
+        1:{offset:0.05}, 
+        2: {offset: 0.05},
+     }
+
+  };
+  var piechart4 = new google.visualization.PieChart(document.getElementById('piechart_consultant_div'));
+  piechart4.draw(piedata4, options);
+
+             //var chart_style = document.getElementById('piechart_consultant_div');
+             //chart_style.className += "pie_software";
 
           }
+          google.charts.setOnLoadCallback(drawPieChart_softwareDeveloper());
+          document.getElementById("consultant_p").innerHTML = 'This graph shows the components for Software Developers.'; 
   // ********************************************
   // ********************************************
   // Function Select Handler - google chart event
@@ -1257,90 +1288,99 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
   // ********************************************
   function selectHandler() {
 
-     if (piechart.getSelection()[0]){
+    if (piechart.getSelection()[0]){
       var selection = piechart.getSelection();
       var row = selection[0].row;
       console.log(row);
       row += 1;
       if (row) {
-       if (row == 1){
-        title = data01;
-        level = data01_1;
-        skill = data01_2;
+        if (row == 1){
+          title = data01;
+          level = data01_1;
+          skill = data01_2;
 
-     }
-     else if (row == 2){
-        title = data02;
-        level = data02_1;
-        skill = data02_2;
+       }
+       else if (row == 2){
+          title = data02;
+          level = data02_1;
+          skill = data02_2;
 
-     }
-     else if (row == 3){
-        title = data03;
-        level = data03_1;
-        skill = data03_2;
+       }
+       else if (row == 3){
+          title = data03;
+          level = data03_1;
+          skill = data03_2;
 
-     }
-     else if (row == 4){
-        title = data04;
-        level = data04_1;
-        skill = data04_2;
+       }
+       else if (row == 4){
+          title = data04;
+          level = data04_1;
+          skill = data04_2;
 
-     }
-     else if (row == 5){
-        title = data05;
-        level = data05_1;
-        skill = data05_2;
+       }
+       else if (row == 5){
+          title = data05;
+          level = data05_1;
+          skill = data05_2;
 
-     }
-     else if (row == 6){
-        title = data06;
-        level = data06_1;
-        skill = data06_2;
+       }
+       else if (row == 6){
+          title = data06;
+          level = data06_1;
+          skill = data06_2;
           //num = data06_3;
        }
        else if (row == 7){
-        title = data07;
-        level = data07_1;
-        skill = data07_2;
+          title = data07;
+          level = data07_1;
+          skill = data07_2;
           //num = data07_3;
        }
        else if (row == 8){
-        title = data08;
-        level = data08_1;
-        skill = data08_2;
+          title = data08;
+          level = data08_1;
+          skill = data08_2;
           //num = data8_3;
        }            
        else if (row == 9){
-        title = data09;
-        level = data09_1;
-        skill = data09_2;
+          title = data09;
+          level = data09_1;
+          skill = data09_2;
           //num = data09_3;
        }
        else if (row == 10){
-        title = data10;
-        level = data10_1;
-        skill = data10_2;
+          title = data10;
+          level = data10_1;
+          skill = data10_2;
           //num = data10_3;
        }
        else if (row == 11){
-        title = data11;
-        level = data11_1;
-     }
-  }
-  if (row >= 1 && row <= 10){
+          title = data11;
+          level = data11_1;
+       }
+    }
+    if (row >= 1 && row <= 10){
               // *******************
               // Draw Sankey Diagram
               // *******************
               google.charts.setOnLoadCallback(drawSankeyChart(title));
               google.charts.setOnLoadCallback(drawPieChart3(level));
               google.charts.setOnLoadCallback(drawStackChart(skill));
+              $('#piechart_consultant_div').hide();
               $('#consultant_p').hide();
               if (row == 2){
                google.charts.setOnLoadCallback(drawPieChart_consultant());
+               document.getElementById("consultant_p").innerHTML = 'This graph shows the components for IT consultants.'; 
                $('#consultant_p').show();
-              }
-              
+               $('#piechart_consultant_div').show();
+            }
+            if (row == 1){
+               google.charts.setOnLoadCallback(drawPieChart_softwareDeveloper());
+               document.getElementById("consultant_p").innerHTML = 'This graph shows the components for Software Developers.'; 
+               $('#consultant_p').show();
+               $('#piechart_consultant_div').show();
+            }
+            
               //drawTableChart(num);
               $('#stackchart_div').show();
               $('#piechart3_div').show();
@@ -1350,36 +1390,36 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
               $('.top-10-skill').show();
            }
            else{
-              google.charts.setOnLoadCallback(drawPieChart2(title));
-              google.charts.setOnLoadCallback(drawPieChart3(level));
-              $('#stackchart_div').hide();
-              $('#piechart3_div').hide();
-              $('#description-whole').hide();
-              document.getElementById("job-pathway-h2").innerHTML = 'Other Jobs';
-              document.getElementById("description-left").innerHTML = 'Besides top 10, there are 17 jobs that are not listed since they are not the major issue. Here the percentage of each jobs is shown (excluded the top 10 jobs).'; 
-           }
+             google.charts.setOnLoadCallback(drawPieChart2(title));
+             google.charts.setOnLoadCallback(drawPieChart3(level));
+             $('#stackchart_div').hide();
+             $('#piechart3_div').hide();
+             $('#description-whole').hide();
+             document.getElementById("job-pathway-h2").innerHTML = 'Other Jobs';
+             document.getElementById("description-left").innerHTML = 'Besides top 10, there are 17 jobs that are not listed since they are not the major issue. Here the percentage of each jobs is shown (excluded the top 10 jobs).'; 
+          }
 
 
 
 
-           function drawSankeyChart(title) {
+          function drawSankeyChart(title) {
                 // Sets chart options.
                 var options = {
                   width: 600,
                   height: 300,
                   sankey: {
-                   node: {
-                    colors: colors,
-                    label: { 
-                    fontSize: 16,
-                    
-                 }},
-                 link: {
-                    colorMode: 'gradient',
-                    colors: colors
-                 }}
+                    node: {
+                      colors: colors,
+                      label: { 
+                         fontSize: 16,
+                         
+                      }},
+                      link: {
+                         colorMode: 'gradient',
+                         colors: colors
+                      }}
 
-              };
+                   };
                 // Instantiates and draws our chart, passing in some options.
                 var chart = new google.visualization.Sankey(document.getElementById('sankeychart_div'));
                 chart.draw(title, options);
@@ -1391,24 +1431,24 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
               // ****************
               
               function drawPieChart3(level) {
-                 var item_title = selection[0];
-                 title_string = piedata.getFormattedValue(item_title.row, 0);
-                 var options = {
+                var item_title = selection[0];
+                title_string = piedata.getFormattedValue(item_title.row, 0);
+                var options = {
                   'title': title_string,
                   'width':800,
                   'height':300,
                   slices: {  
-                   0:{offset:0.05},
-                   1:{offset:0.05}, 
-                   2: {offset: 0.2},
-                }
-             };
-             var piechart3 = new google.visualization.PieChart(document.getElementById('piechart3_div'));
-             piechart3.draw(level, options);
+                    0:{offset:0.05},
+                    1:{offset:0.05}, 
+                    2: {offset: 0.2},
+                 }
+              };
+              var piechart3 = new google.visualization.PieChart(document.getElementById('piechart3_div'));
+              piechart3.draw(level, options);
 
-          }
+           }
 
-          function drawPieChart2(title){
+           function drawPieChart2(title){
               // Set chart options
               var piechart_options2 = {
                title:'Other Jobs',
@@ -1428,16 +1468,16 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
 
            }
            function drawStackChart(skill) {
-             var item_title = selection[0];
-             title_string = piedata.getFormattedValue(item_title.row, 0);
-             var options = {
-              title: title_string,
-              width: 1000,
-              height: 400,
-              legend: { position: 'top', maxLines: 3 },
-              bar: { groupWidth: '75%' },
-              isStacked: true
-           };
+              var item_title = selection[0];
+              title_string = piedata.getFormattedValue(item_title.row, 0);
+              var options = {
+                title: title_string,
+                width: 1000,
+                height: 400,
+                legend: { position: 'top', maxLines: 3 },
+                bar: { groupWidth: '75%' },
+                isStacked: true
+             };
 
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.BarChart(document.getElementById('stackchart_div'));
@@ -1455,16 +1495,16 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
                   height: 300,
                   sankey: {
                      node: {
-                       colors: colors,
-                       label: { 
-                       fontSize: 16,
-                    }  },
-                    link: {
-                       colorMode: 'gradient',
-                       colors: colors
-                    }}
+                      colors: colors,
+                      label: { 
+                         fontSize: 16,
+                      }  },
+                      link: {
+                         colorMode: 'gradient',
+                         colors: colors
+                      }}
 
-                 };
+                   };
                 // Instantiates and draws our chart, passing in some options.
                 var chart = new google.visualization.Sankey(document.getElementById('sankeychart_div'));
                 chart.draw(title, options);
@@ -1477,31 +1517,31 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
               
               function drawPieChart3(level) {
 
-                 var options = {
+                var options = {
                   'title': 'Software Developer',
                   'width':800,
                   'height':300,
                   slices: {  
-                   0:{offset:0.05},
-                   1:{offset:0.05}, 
-                   2: {offset: 0.2},
-                }
-             };
-             var piechart3 = new google.visualization.PieChart(document.getElementById('piechart3_div'));
-             piechart3.draw(level, options);
+                    0:{offset:0.05},
+                    1:{offset:0.05}, 
+                    2: {offset: 0.2},
+                 }
+              };
+              var piechart3 = new google.visualization.PieChart(document.getElementById('piechart3_div'));
+              piechart3.draw(level, options);
 
-          }
+           }
 
-          function drawStackChart(skill) {
+           function drawStackChart(skill) {
 
-           var options = {
-            title: 'Software Developer',
-            width: 1000,
-            height: 400,
-            legend: { position: 'top', maxLines: 3 },
-            bar: { groupWidth: '75%' },
-            isStacked: true
-         };
+             var options = {
+               title: 'Software Developer',
+               width: 1000,
+               height: 400,
+               legend: { position: 'top', maxLines: 3 },
+               bar: { groupWidth: '75%' },
+               isStacked: true
+            };
 
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.BarChart(document.getElementById('stackchart_div'));

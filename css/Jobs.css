@@ -154,6 +154,10 @@ section.junior-to-senior{
     background-color: #7d5711;
     border-color: #7d5711;
 }
+.year-button:hover{
+    background-color: #7d5711;
+    border-color: #7d5711;
+}
 .selector-diff:hover{
     background-color: #7d5711;
     border-color: #7d5711;
@@ -175,4 +179,7 @@ section.junior-to-senior{
 section.compare-year{
       margin-top: 0px;
     padding-top: 0px;
+}
+#piechart_consultant_div{
+  margin-left: 40px;
 }

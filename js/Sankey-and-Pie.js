@@ -636,7 +636,7 @@ var data27_3 = [['software development',
 }
 
 var dvTable = document.getElementById("tablechart_div");
-dvTable.innerHTML = "";
+dvTable.innerHTML = "";//h
 dvTable.appendChild(table);
 table.className += ("tablechart_format");
 }

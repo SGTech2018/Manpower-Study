@@ -1,4 +1,11 @@
-
+.tablechart2_format{
+      margin-top: 20px;
+    margin-left: 166px;
+}
+.text-before-table-format{
+      margin-left: 166px;
+    margin-top: 50px;
+}
 div.back-to-top {
     position: fixed;
     bottom: 15px;
@@ -199,4 +206,8 @@ section.compare-year{
 .yearchart{
       margin-left: -57px;
     margin-right: -108px;
+}
+#placeholder-yearchart{
+    margin-top: 38px;
+    margin-left: 15px;
 }

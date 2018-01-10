@@ -2,9 +2,11 @@
 // Draw the Area Chart
 // ******************
 // Define
-$("#yearchart_div").hide();
+//$("#yearchart_div").hide();
 var titles_past = new Array();
-var year = 2016;
+var year = 2013;
+
+// Remove function
 Array.prototype.remove = function() {
   var what, a = arguments, L = a.length, ax;
   while (L && this.length) {
@@ -15,9 +17,13 @@ Array.prototype.remove = function() {
   }
   return this;
 };
+
+// Load Google Chart
 google.charts.load('current', {'packages':['corechart']});
+
 // JQuery
 $( document ).ready(function() {
+  // Jobs
   $(".job-button").click(function(){
     var $this = $(this);
     if(!titles_past.includes($this.val())){
@@ -37,79 +43,82 @@ $( document ).ready(function() {
 
     }});
 
+  // Years
   $(".year-button").click(function(){
     var $this = $(this);
-    $("#yearchart_div").show();
-    year = $this.val();
 
-    google.charts.setOnLoadCallback(drawColumnChart);
-    console.log(year);
-  }); 
+        year = $this.val();
+        if(!$('#yearchart_div').hasClass('yearchart')){
+          $('#yearchart_div').addClass('yearchart');
+        }
+   
+      google.charts.setOnLoadCallback(drawColumnChart);
+      function drawColumnChart(){
+        var data_2016 = google.visualization.arrayToDataTable([
+          ['Skill', 'Count',{ role: 'style' }],
+          ['Communication Skill', 4251,''],
+          ['Documentation', 2934,''],
+          ['SQL', 2593,''],
+          ['Java', 2338,''],
+          ['Troubleshooting', 2014,''],
+          ['Oracle',1971,''],
+          ['MS Word',1923,''],
+          ['Reporting',1871,''],
+          ['Unix',1659,''],
+          ['Consulting',1600,'']
+          ]);
 
-    }); // document ready
+        var data_2015 = google.visualization.arrayToDataTable([
+          ['Skill', 'Count',{ role: 'style' }],
+          ['Communication Skill', 1785,''],
+          ['SQL', 1249,''],
+          ['Documentation', 1126,''],
+          ['Java', 1056,''],
+          ['Oracle', 987,''],
+          ['Troubleshooting',945,''],
+          ['Reporting',810,''],
+          ['Probem Solving',738,''],
+          ['Unix',696,''],
+          ['Project Management',642,'']
+          ]);
 
-function drawColumnChart(){
-  console.log("invoked");
-  var data_2016 = google.visualization.arrayToDataTable([
-    ['Skill', 'Count',{ role: 'style' }],
-    ['Communication Skill', 4251,''],
-    ['Documentation', 2934,''],
-    ['SQL', 2593,''],
-    ['Java', 2338,''],
-    ['Troubleshooting', 2014,''],
-    ['Oracle',1971,''],
-    ['MS Word',1923,''],
-    ['Reporting',1871,''],
-    ['Unix',1659,''],
-    ['Consulting',1600,'']
-    ]);
+        var data_2014 = google.visualization.arrayToDataTable([
+          ['Skill', 'Count',{ role: 'style' }],
+          ['Communication Skill', 3292,''],
+          ['SQL', 2175,''],
+          ['Troubleshooting', 1835,''],
+          ['Java', 1799,''],
+          ['Documentation', 1793,''],
+          ['Oracle',1779,''],
+          ['Reporting',1396,''],
+          ['Project Management',1141,''],
+          ['Problem Solving', 1112,''],
+          ['MS Word',1097,'']
+          ]);
 
-  var data_2015 = google.visualization.arrayToDataTable([
-    ['Skill', 'Count',{ role: 'style' }],
-    ['Communication Skill', 1785,''],
-    ['SQL', 1249,''],
-    ['Documentation', 1126,''],
-    ['Java', 1056,''],
-    ['Oracle', 987,''],
-    ['Troubleshooting',945,''],
-    ['Reporting',810,''],
-    ['Probem Solving',738,''],
-    ['Unix',696,''],
-    ['Project Management',642,'']
-    ]);
+        if(year == 2014){
+          data_column = data_2014;
+        }else if(year == 2015){
+          data_column = data_2015;
+        }else if(year == 2016){
+          data_column = data_2016;
+        }
 
-  var data_2014 = google.visualization.arrayToDataTable([
-    ['Skill', 'Count',{ role: 'style' }],
-    ['Communication Skill', 3292,''],
-    ['SQL', 2175,''],
-    ['Troubleshooting', 1835,''],
-    ['Java', 1799,''],
-    ['Documentation', 1793,''],
-    ['Oracle',1779,''],
-    ['Reporting',1396,''],
-    ['Project Management',1141,''],
-    ['Problem Solving', 1112,''],
-    ['MS Word',1097,'']
-    ]);
+        var options_column = {
+          title: "Top 10 Skills in the Whole Industry For Year " + year,
+          width: 600,
+          height: 500,
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("yearchart_div"));
+        chart.draw(data_column, options_column);
 
-  if(year == 2014){
-    data_column = data_2014;
-  }else if(year == 2015){
-    data_column = data_2015;
-  }else if(year == 2016){
-    data_column = data_2016;
-  }
+      }
+      console.log(year);
+    }); 
+}); // document ready
 
-  var options_column = {
-    title: "Top 5 Skills in the Whole Industry",
-    width: 600,
-    height: 600
 
-  };
-  var chart = new google.visualization.ColumnChart(document.getElementById("yearchart_div"));
-  chart.draw(data_column, options_column);
-  
-}
+
 
 function drawAreaChart() {
   var data00 = ['Year', '2014', '2015', '2016', '2017'];

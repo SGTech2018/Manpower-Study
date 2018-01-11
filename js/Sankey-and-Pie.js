@@ -146,9 +146,9 @@ var data07_3 =  [['communication skill',
 ['reporting', 'information system', 'communication skill'],
 ['project management',
 'information technology',
-'system integration testing'],
+'system integration Testing'],
 ['information system', 'reporting', 'unix'],
-['application development', 'troubleshooting', 'integration testing'],
+['application development', 'troubleshooting', 'integration Testing'],
 ['javascript', 'problem solving', 'scrum'],
 ['html', 'business requirement', 'routing'],
 ['business requirement', 'application development', 'reporting'],
@@ -197,15 +197,15 @@ var data09_3 = [['business requirement', 'communication skill', 'agile'],
 ['project management', 'project management', 'communication skill'],
 ['reporting', 'problem solving', 'data analytics'],
 ['business analysis', 'information technology', 'documentation'],
-['problem solving', 'agile', 'user acceptance testing'],
-['functional specification', 'test case', 'technical skill'],
+['problem solving', 'agile', 'user acceptance Testing'],
+['functional specification', 'Test case', 'technical skill'],
 ['word', 'oracle', 'power point'],
 ['excel', 'writing', 'excel'],
 ['writing', 'sap', 'collaboration'],
 ['oracle', 'requirement gathering', 'web service']];
 var data10_3 = [['communication skill', 'automation', 'consulting'],
-['test case', 'communication skill', 'leadership'],
-['documentation', 'test case', 'automation'],
+['Test case', 'communication skill', 'leadership'],
+['documentation', 'Test case', 'automation'],
 ['automation', 'java', 'communication skill'],
 ['software development', 'documentation', 'information system'],
 ['information system', 'reporting', 'sap'],
@@ -213,15 +213,15 @@ var data10_3 = [['communication skill', 'automation', 'consulting'],
 ['reporting', 'software development', 'crm'],
 ['sql', 'agile', 'collaboration'],
 ['java', 'scripting', 'information technology'],
-['qa', 'test automation', 'software development'],
-['agile', 'information system', 'test case'],
-['word', 'test execution', 'data management'],
-['quality assurance', 'selenium', 'test management'],
-['scripting', 'unix', 'test strategy'],
-['test execution', 'test strategy', 'test automation'],
+['qa', 'Test automation', 'software development'],
+['agile', 'information system', 'Test case'],
+['word', 'Test execution', 'data management'],
+['quality assurance', 'selenium', 'Test management'],
+['scripting', 'unix', 'Test strategy'],
+['Test execution', 'Test strategy', 'Test automation'],
 ['software development life cycle', 'problem solving', 'erp'],
 ['problem solving', 'web service', 'unix'],
-['excel', 'test management', 'problem solving'],
+['excel', 'Test management', 'problem solving'],
 ['selenium', 'project management', 'java']];
 var data11_3 = [['documentation',
 'documentation',
@@ -338,7 +338,7 @@ var data16_3 =  [['communication skill',
 ['troubleshooting', 'project management', 'reporting'],
 ['information system', 'reporting', 'marketing'],
 ['problem solving', 'oracle', 'project management'],
-['java', 'pre-sales', 'documentation'],
+['java', 'pre-Sales Manager', 'documentation'],
 ['reporting', 'software development', 'business process'],
 ['word', 'java', 'collaboration'],
 ['information technology', 'marketing', 'sap'],
@@ -350,7 +350,7 @@ var data16_3 =  [['communication skill',
 ['excel', 'problem solving', 'system design'],
 ['web service', 'scripting', 'writing'],
 ['software development life cycle', 'big data', 'material'],
-['pre-sales', 'business process', 'business development']];
+['pre-Sales Manager', 'business process', 'business development']];
 var data17_3 = [['troubleshooting', 'communication skill', 'service delivery'],
 ['communication skill', 'oracle', 'consulting'],
 ['information technology', 'sap', 'itil'],
@@ -576,7 +576,7 @@ var data27_3 = [['software development',
 ['sql', 'technical support', ' '],
 ['software development life cycle', 'firmware', ' '],
 ['problem solving', 'procurement', ' '],
-['integration testing', 'eda', ' ']];
+['integration Testing', 'eda', ' ']];
 
 // *************************
   // *************************
@@ -643,7 +643,7 @@ table.className += ("tablechart_format");
 
 var data_total_3 = [data01_3, data02_3, data03_3, data04_3, data05_3, data06_3, data07_3, data08_3, data09_3, data10_3, data11_3, data12_3, data13_3, data14_3, data15_3, data16_3, data17_3, data18_3, data19_3, data20_3, data21_3, data22_3, data23_3, data24_3, data25_3, data26_3, data27_3];
 var titles = [];
-var all_jobs = ['Software Developer', 'IT Consultant ', 'System Administrator', 'Project Manager', 'Enterprise/System Architect', 'IT Technicial/hhSupport', 'Sales', 'IT Analyst', 'Business Analyst', 'Test', 'Network Engineer', 'Web developer', 'Data Analyst BI', 'Security', 'Business - Others (Accountant, Audit etc.', 'Business Consultant', 'IT Service', 'IT Manager', 'Mobile developer', 'Data Scientist', 'IT Operations', 'Others (Devops, r&d)', 'Database Administrator', 'UI/UX', 'Marketing', 'Product Manager', 'Embedded  System Developer'];
+var all_jobs = ['Software Developer', 'IT Consultant ', 'System Administrator', 'Project Manager', 'Enterprise/System Architect', 'IT Technicial/Support', 'Sales Manager', 'IT Analyst', 'Business Analyst', 'Test Engineer', 'Network Engineer', 'Web developer', 'Data Analyst BI', 'Security', 'Business - Others', 'Business Consultant', 'IT Service', 'IT Manager', 'Mobile developer', 'Data Scientist', 'IT Operations', 'Others (Devops, r&d)', 'Database Administrator', 'UI/UX', 'Marketing', 'Product Manager', 'Embedded  System Developer'];
 var titles_past = [];
 $( document ).ready(function() {
 	$(".btn-group-customize").hide();
@@ -855,7 +855,7 @@ google.charts.load('current', {'packages':['corechart']});
 google.charts.load('current', {'packages':['sankey']});
 var colors = ['#dbaa95','#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
 '#cab2d6', '#ffff99', '#1f78b4', '#33a02c','#99b2db','#aabcef'];
-document.getElementById("job-pathway-h2").innerHTML = 'Adjacency of Jobs'; 
+document.getElementById("job-pathway-h2").innerHTML = 'Adjacency of Jobs (For Year 2017)'; 
 document.getElementById("description-left").innerHTML = 'The graph presents the adjacency of the top 10 jobs with in total 27 job clusters. The more weight a line has, the more similar two job clusters are. If detailed data is required, please click the overview button below.'; 
       // Set a callback to run when the Google Visualization API is loaded.
       google.charts.setOnLoadCallback(drawChart);
@@ -878,14 +878,14 @@ document.getElementById("description-left").innerHTML = 'The graph presents the 
         	['Enterprise/System Architect', 1713],
         	['IT Technicial/Support', 1502],
         	['IT Analyst', 1376],
-        	['Sales', 1352],
+        	['Sales Manager', 1352],
         	['Business Analyst', 1319],
-        	['Test', 1104],
+        	['Test Engineer', 1104],
         	['Others', 8380]
         	]);
 
         // Set chart options
-        var piechart_options = {'title':'Top 10 Jobs',
+        var piechart_options = {'title':'Top 10 Jobs (for year 2017)',
         'width':800,
         'height':300,
         slices: {  0: {offset: 0.2},
@@ -903,7 +903,7 @@ var data01 = new google.visualization.arrayToDataTable([
 	['Software Developer', 'IT Consultant ', 1.63],
 	['Software Developer', 'Others (Devops r&d)', 1.53],
 	['Software Developer', 'Data Analyst BI', 1.51],
-	['Software Developer', 'Test', 1.26],
+	['Software Developer', 'Test Engineer', 1.26],
 	['Software Developer', 'Business Consultant', 1.26],
 	['Software Developer', 'Business Analyst', 1.24],
 	['Software Developer', 'IT Manager', 1.13]
@@ -919,7 +919,7 @@ var data02 = new google.visualization.arrayToDataTable([
 	['IT Consultant ', 'Data Analyst BI', 2.65],
 	['IT Consultant ', 'Business Analyst', 2.25],
 	['IT Consultant ', 'IT TechnicialSupport', 2.23],
-	['IT Consultant ', 'Sales', 2.22]
+	['IT Consultant ', 'Sales Manager', 2.22]
 	]);
 var data03 = new google.visualization.arrayToDataTable([
 	['From', 'To', 'Weight'],
@@ -944,7 +944,7 @@ var data04 = new google.visualization.arrayToDataTable([
 	['Project Manager', 'IT Service', 2.04],
 	['Project Manager', 'Product Manager', 1.97],
 	['Project Manager', 'IT Consultant ', 1.94],
-	['Project Manager', 'Sales', 1.94],
+	['Project Manager', 'Sales Manager', 1.94],
 	['Project Manager', 'Business Analyst', 1.76]
 	]);      
 var data05 = new google.visualization.arrayToDataTable([
@@ -970,7 +970,7 @@ var data06 = new google.visualization.arrayToDataTable([
 	['IT Technicial Support', 'IT Operations', 2.58],
 	['IT Technicial Support', 'Business Consultant', 2.38],
 	['IT Technicial Support', 'IT Consultant ', 2.23],
-	['IT Technicial Support', 'Sales', 2.07],
+	['IT Technicial Support', 'Sales Manager', 2.07],
 	['IT Technicial Support', 'IT Analyst', 1.61]
 	]);      
 var data07 = new google.visualization.arrayToDataTable([
@@ -988,16 +988,16 @@ var data07 = new google.visualization.arrayToDataTable([
 	]);      
 var data08 = new google.visualization.arrayToDataTable([
 	['From', 'To', 'Weight'],
-	['Sales', 'Business  Others (Accountant A', 5.53],
-	['Sales', 'Business Consultant', 4.24],
-	['Sales', 'IT Operations', 3.66],
-	['Sales', 'IT Manager', 3.36],
-	['Sales', 'Product Manager', 2.66],
-	['Sales', 'IT Service', 2.55],
-	['Sales', 'Marketing', 2.27],
-	['Sales', 'IT Consultant ', 2.22],
-	['Sales', 'EnterpriseSystem Architect', 2.18],
-	['Sales', 'IT TechnicialSupport', 2.07]
+	['Sales Manager', 'Business  Others (Accountant A', 5.53],
+	['Sales Manager', 'Business Consultant', 4.24],
+	['Sales Manager', 'IT Operations', 3.66],
+	['Sales Manager', 'IT Manager', 3.36],
+	['Sales Manager', 'Product Manager', 2.66],
+	['Sales Manager', 'IT Service', 2.55],
+	['Sales Manager', 'Marketing', 2.27],
+	['Sales Manager', 'IT Consultant ', 2.22],
+	['Sales Manager', 'EnterpriseSystem Architect', 2.18],
+	['Sales Manager', 'IT TechnicialSupport', 2.07]
 	]);      
 var data09 = new google.visualization.arrayToDataTable([
 	['From', 'To', 'Weight'],
@@ -1010,20 +1010,20 @@ var data09 = new google.visualization.arrayToDataTable([
 	['Business Analyst', 'IT Operations', 1.69],
 	['Business Analyst', 'EnterpriseSystem Architect', 1.6],
 	['Business Analyst', 'Business  Others (Accountant A', 1.6],
-	['Business Analyst', 'Test', 1.34]
+	['Business Analyst', 'Test Engineer', 1.34]
 	]);      
 var data10 = new google.visualization.arrayToDataTable([
 	['From', 'To', 'Weight'],
-	['Test', 'EnterpriseSystem Architect', 1.71],
-	['Test', 'IT Consultant ', 1.61],
-	['Test', 'Business Consultant', 1.6],
-	['Test', 'Others (Devops r&d)', 1.58],
-	['Test', 'Business  Others (Accountant A', 1.55],
-	['Test', 'IT Analyst', 1.54],
-	['Test', 'Data Analyst BI', 1.46],
-	['Test', 'IT Manager', 1.43],
-	['Test', 'IT Operations', 1.42],
-	['Test', 'Business Analyst', 1.34]
+	['Test Engineer', 'EnterpriseSystem Architect', 1.71],
+	['Test Engineer', 'IT Consultant ', 1.61],
+	['Test Engineer', 'Business Consultant', 1.6],
+	['Test Engineer', 'Others (Devops r&d)', 1.58],
+	['Test Engineer', 'Business  Others (Accountant A', 1.55],
+	['Test Engineer', 'IT Analyst', 1.54],
+	['Test Engineer', 'Data Analyst BI', 1.46],
+	['Test Engineer', 'IT Manager', 1.43],
+	['Test Engineer', 'IT Operations', 1.42],
+	['Test Engineer', 'Business Analyst', 1.34]
 	]);
 var data11 = new google.visualization.DataTable();
 data11.addColumn('string', 'Title');
@@ -1034,7 +1034,7 @@ data11.addRows([
 	['Data Analyst/ BI', 715],
 	['Security', 672],
 	['Business Consultant', 640],
-	['Business - Others (Accountant, Audit etc.)', 640],
+	['Business - Others', 640],
 	['IT Manager', 476],
 	['IT Service', 475],
 	['Mobile developer', 466],
@@ -1207,7 +1207,7 @@ var data09_2 = new google.visualization.arrayToDataTable([
 var data10_2 = new google.visualization.arrayToDataTable([
 	['Skill', 'Junior', 'Middle', 'Senior', { role: 'annotation' } ],
 	['automation', 23.652, 13.304, 1.217, ''],
-	['test case', 25.217, 11.304, 0.783, ''],
+	['Test case', 25.217, 11.304, 0.783, ''],
 	['Communication skill', 21.478, 8.087, 0.87, ''],
 	['Software development', 14.348, 6.696, 0.957, ''],
 	['Documentation', 16.348, 5.217, 0.348, ''],
@@ -1239,7 +1239,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
   		['Oracle consultant', 4154],
   		['Generic IT Consultant', 14858]]);
   	var options = {
-  		'title': 'IT Consultant Segmentation',
+  		'title': 'IT Consultant Segmentation (for year 2017)',
   		'width':800,
   		'height':300,
   		slices: {  
@@ -1262,7 +1262,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
   		['C++/C#', 2372],
   		['Sharepoint', 832]]);
   	var options = {
-  		'title': 'Software Developer Segmentation',
+  		'title': 'Software Developer Segmentation (for year 2017)',
   		'width':800,
   		'height':300,
   		slices: {  
@@ -1390,7 +1390,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
               if($('#piechart3_div').hasClass("other-piechart3")){
               	$('#piechart3_div').removeClass("other-piechart3");
               }
-              document.getElementById("job-pathway-h2").innerHTML = 'Adjacency of Jobs'; 
+              document.getElementById("job-pathway-h2").innerHTML = 'Adjacency of Jobs (For Year 2017)'; 
               document.getElementById("description-left").innerHTML = 'The graph presents the adjacency of the top 10 jobs with in total 27 job clusters. The more weight a line has, the more similar two job clusters are. If detailed data is required, please click the overview button below.'; 
               $('.top-10-skill').show();
               $('#description-right-3').show();
@@ -1398,7 +1398,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
               //$('#consultant_p').show();
           }
           else{
-          	$('#top-10-seniority-h2').innerHTML = "Percentile of Seniority";
+          	$('#top-10-seniority-h2').innerHTML = "Percentile of Seniority (For Year 2017)";
           	google.charts.setOnLoadCallback(drawPieChart2(title));
           	google.charts.setOnLoadCallback(drawPieChart3(level));
           	$('#stackchart_div').hide();
@@ -1408,7 +1408,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
           		$('#description-right-3').hide();
           		$('#piechart_consultant_div').hide();
           		$('#consultant_p').hide();
-          		document.getElementById("job-pathway-h2").innerHTML = 'Other Jobs';
+          		document.getElementById("job-pathway-h2").innerHTML = 'Other Jobs (For Year 2017)';
           		document.getElementById("description-left").innerHTML = 'Besides top 10, there are 17 jobs that are not listed since they are not the major issue. Here the percentage of each jobs is shown (excluded the top 10 jobs).'; 
           	}
 
@@ -1447,7 +1447,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
               	var item_title = selection[0];
               	title_string = piedata.getFormattedValue(item_title.row, 0);
               	var options = {
-              		'title': title_string,
+              		'title': title_string + " (for year 2017)",
               		'width':800,
               		'height':300,
               		slices: {  
@@ -1464,7 +1464,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
               function drawPieChart2(title){
               // Set chart options
               var piechart_options2 = {
-              	title:'Other Jobs',
+              	title:'Other Jobs (for year 2017)',
               	width:800,
               	height:300,        
               	backgroundColor: '#611d1b',
@@ -1484,7 +1484,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
           	var item_title = selection[0];
           	title_string = piedata.getFormattedValue(item_title.row, 0);
           	var options = {
-          		title: title_string,
+          		title: title_string + "(for year 2017)",
           		width: 1000,
           		height: 400,
           		legend: { position: 'top', maxLines: 3 },
@@ -1531,7 +1531,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
               function drawPieChart3(level) {
 
               	var options = {
-              		'title': 'Software Developer',
+              		'title': 'Software Developer (for year 2017)',
               		'width':800,
               		'height':300,
               		slices: {  
@@ -1548,7 +1548,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
               function drawStackChart(skill) {
 
               	var options = {
-              		title: 'Software Developer',
+              		title: 'Software Developer (for year 2017)',
               		width: 1000,
               		height: 400,
               		legend: { position: 'top', maxLines: 3 },

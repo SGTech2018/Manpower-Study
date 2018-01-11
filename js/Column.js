@@ -16,7 +16,7 @@
       ]);
 
       var options_column = {
-        title: "Top 10 Skills in the Whole Industry",
+        title: "Top 10 Skills in the Entire Industry (for year 2017)",
         width: 600,
         height: 600
         

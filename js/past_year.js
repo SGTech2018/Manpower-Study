@@ -74,7 +74,7 @@ function drawTableChart2(index){
     title = "IT Analyst";
   }else if(index == "6"){
     num = data06_2;
-    title = "Test";
+    title = "Test Engineer";
   }else if(index == "7"){
     num = data07_2;
     title = "Technical Support";
@@ -217,7 +217,7 @@ var title;
     title = "IT Analyst";
   }else if(index == "6"){
     
-    title = "Test";
+    title = "Test Engneer";
   }else if(index == "7"){
     
     title = "Technical Support";
@@ -345,7 +345,7 @@ function drawAreaChart() {
   var data03 = ['Project Manager', 9.53,10.36, 12.97,6.69]; 
   var data04 = ['System Administrator',9.94,5.73,8.57, 6.81];
   var data05 = ['IT Analyst', 15.78,11.94,7.51, 4.83]; //
-  var data06 = ['Test', 3.79,8.15,4.48,4.08 ];//
+  var data06 = ['Test Engineer', 3.79,8.15,4.48,4.08 ];//
   var data07 = ['Technical Support',12.12, 5.73, 2.60, 5.23];
   var data08 = ['Business Analyst',10.44,4.21,1.99,4.65]
 

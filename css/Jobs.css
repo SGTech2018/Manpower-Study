@@ -84,7 +84,7 @@ width:1000px;
 }
       
 #description-left{
-    margin-left: 188px;
+    margin-left: 158px;
     margin-top: -7px;
 }
 
@@ -177,10 +177,14 @@ section.junior-to-senior{
    border-color: #da9d2d;
 }
 .button-group-year{
-    margin-left: 169px;
+        margin-left: 72px;
     margin-top: 30px;
 }
-.year-button, .job-title-button{
+.year-button-latest{
+    cursor: not-allowed !important;
+    opacity: 0.65 !important;
+}
+.year-button, .job-title-button, .year-button-latest{
    background-color: #da9d2d;
    color: white;
    height: 40px;
@@ -189,7 +193,7 @@ section.junior-to-senior{
        width: 148px;
        margin-right:8px;
 }
-.year-button{
+.year-button, .year-button-headline{
   background-color:#e0c189 !important;
 }
 .selector-diff{
@@ -245,6 +249,14 @@ section.compare-year{
 }
 .btn-group-vertical .job-title-button {
   display: block;
+  float: none;
+  width: 100%;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+.btn-group-vertical .year-button-latest{
+    display: block;
   float: none;
   width: 100%;
   -webkit-border-radius: 0;

@@ -83,7 +83,7 @@ function drawTableChart2(index){
     title = "Business Analyst";
   }
 
-  console.log(num);
+  //console.log(num);
 
     //Build an array containing Customer records.
     var headline = new Array();
@@ -127,15 +127,14 @@ function drawTableChart2(index){
     var table_name = "tablechart2_div"+index;
 //var jquery_table_name = "."+table_name;
 //$(jquery_table_name).show();
-console.log(table_name);
+//console.log(table_name);
 var dvTable = document.getElementById(table_name);
 dvTable.innerHTML = "";
 dvTable.appendChild(table);
 table.className += ("tablechart2_format");
 
-var h2_name = "text-before-table"+index;
-var h2_title = document.getElementById(h2_name);
-h2_title.innerHTML = "Top 5 Skills Transit for "+title;
+
+
 } // draw table chart 2
 
 // *****************
@@ -192,17 +191,53 @@ $( document ).ready(function() {
         $(this).removeClass('change-color');
       }
 
+
+      // show or hide the graphs
       for(var i = 1; i < 9; i++){
         var table_name = "#tablechart2_div"+i.toString();
         var h2_name = "#text-before-table"+i.toString();
+        var h2_name2 = "text-before-table"+i.toString();
+        var h2_title = document.getElementById(h2_name2);
+var title;
+          var index = i.toString();
+            if(index == "1"){
+    
+    title = "Software Developer";
+  }else if(index == "2"){
+    
+    title = "Business Related Jobs";
+  }else if(index == "3"){
+    
+    title = "Project Manager";
+  }else if(index == "4"){
+    
+    title = "System Administrator";
+  }else if(index == "5"){
+    
+    title = "IT Analyst";
+  }else if(index == "6"){
+    
+    title = "Test";
+  }else if(index == "7"){
+    
+    title = "Technical Support";
+  }else if(index == "8"){
+    
+    title = "Business Analyst";
+  }
+
         if(titles_past.includes(i.toString())){
           drawTableChart2(i.toString());
-
           $(table_name).show();
           $(h2_name).show();
+
+          h2_title.innerHTML = "Top 5 Skills Transit for "+title;
+          //console.log("show "+h2_name);
         }else{
           $(table_name).hide();
+          h2_title.innerHTML = "";
           $(h2_name).hide();
+          //console.log("hide "+h2_name);
         }
       }
       
@@ -297,8 +332,6 @@ $( document ).ready(function() {
       $('#yearchart_div').addClass('yearchart');
     }
 
-
-    console.log(year);
   }); 
 }); // document ready
 
@@ -317,7 +350,7 @@ function drawAreaChart() {
   var data08 = ['Business Analyst',10.44,4.21,1.99,4.65]
 
   var array = new Array();
-  console.log(titles_past);
+  //console.log(titles_past);
   array.push(data00);
   if(titles_past.includes('1')){
     array.push(data01);
@@ -352,7 +385,7 @@ function drawAreaChart() {
     }
     traverse_array.push(line);
   }
-  console.log(traverse_array);
+  //console.log(traverse_array);
 
   var data = new google.visualization.arrayToDataTable(traverse_array);
   var options = {

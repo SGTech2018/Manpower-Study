@@ -18,6 +18,7 @@
 </style>
 </head>
 <body>
+
   <header class="hero" style="background-image: url(img/header.jpg);visibility: visible;">
     <div class="hero-center">
       <h1 class="hero__logo aos-init aos-animate"style="
@@ -29,8 +30,9 @@
       <i class="chevron bottom"></i>
     </span>
   </header>
+<p id="back-to-top-bookmark"></p>
 
-  <section class="top-10-job">
+  <section class="top-10-job" style="padding-top:0px;margin-top:0px;">
     <h2 class="aos-scroll" style="visibility:visible">Top 10 Jobs in Market</h2>
 
     <table class="columns"> 
@@ -45,6 +47,7 @@
         </th>
       </tr>
     </table>
+    <p id="job-level-p"></p>
     <h2 id="job-level-h2" class="aos-scroll">Diagram of Top 10 Skills in the IT Industry</h2>
     <table>
       <tr>
@@ -57,6 +60,7 @@
     </table>
   </section>
   <section class="job-adjacency">
+  	<p id="job-pathway-p"></p>
     <h2 id="job-pathway-h2" class="aos-scroll" style="color: white;"></h2>
     <table>
       <tr>
@@ -79,20 +83,22 @@
   </tr>
 </table>
 </section>
+<p id="top-10-seniority_p"></p>
 <section class="top-10-skill">
- <h2 class="aos-scroll">Top 10 Skills By Seniority</h2>
+	
+ <h2 class="aos-scroll" id="top-10-seniority-h2"></h2>
  <table>
   <tr>
     <th>
       <div id="stackchart_div" class="graph-whole-left"></div>
     </th>
     <th>
-      <p id="description-right-3" class="aos-scroll">The graph on the left is a stack diagram, listing the top 10 skills of a particular job. The color represents position level</p>
+      <p id="description-right-3" class="aos-scroll">The graph on the left is a stack diagram, listing the top 10 skills of a particular job. The color represents position level. The ranking is based on the weight of a skill, namely calculated by dividing total percentage (sum of junior, middle and senior) divided by the total count of jobs.</p>
     </th>
   </tr>
   <tr>
     <th>
-      <p id="description-left" class="aos-scroll">The graph shows the corresponding percentage of the level information of the first graph.</p>
+      <p id="description-left" class="aos-scroll">The graph shows the corresponding percentage of the level information: Junior (1 - 5 years working experience), Middle (5 - 10 years working experience), Senior (more than 10 years working experience).</p>
     </th>
     <th>
       <div id="piechart3_div" class="graph-whole-right"></div>
@@ -112,7 +118,9 @@
 </table>
 </section>
 </section>
+<p id="junior-to-senior-p"></p>
 <section class="junior-to-senior">
+	
 	<h2 style="color: white;margin-bottom: 39px;">Junior To Senior Skill Transition (Top 20 Skills)</h2>
   <button type="button" class="show-button-group">Show All Titles</button>
   <div class="btn-group-customize">
@@ -152,7 +160,9 @@
   <p id="description-adjacency" class="aos-scroll">* If only one button is clicked: the ranking is based on the skill count of the selected job; if multiple buttons are clicked: the ranking is based on how many times the skills appear in the top 10 skill of the multi selected jobs.</p>
   <p id="description-adjacency2" class="aos-scroll" >* For some job titles, the senior skills are 'undefined', which indicates the data set is too small (less than 10) to be used as mature output.</p>
 </section>
+<p id="compare-year-p"></p>
 <section class="compare-year">
+	
   <h2 class="aos-scroll">Year Comparison</h2>
   <table style="
   margin-left: 153px;
@@ -232,11 +242,24 @@
 <div id="tablechart2_div8" class="table-element"></div>
 </section>
 
-
-<div class="back-to-top" style="">
-  <a href="#piechart_div"><img title="Back to Top" src="img/icon-backtotop-1b04df73090f6b0f3192a3b71874ca3b3cc19dff16adc6cf365cd0c75897f6c0.png" alt="Icon backtotop" style="
-  width: 60px;"></a>
+<div id="slide-window-bottom">
+	<div id="slide-window" class="list-group-bookmark">
+		<p id="list-group-item-p">Table of Contents</p>
+	<a href="#back-to-top-bookmark" class="list-group-item">Top 10 Jobs in the Market</a>
+	<a href="#job-level-p" class="list-group-item">Top 10 Skills in the IT Industry</a>
+	<a href="#job-pathway-p" class="list-group-item">Job Adjacency</a>
+	<a href="#top-10-seniority_p" class="list-group-item">Top 10 Skills for a Job By Seniority</a>
+	<a href="#piechart3_div" class="list-group-item">Seniority Percentile Information</a>
+	<a href="#junior-to-senior-p" class="list-group-item">Junior to Senior Job Transition</a>
+	<a href="#compare-year-p" class="list-group-item">Past Years Comparison</a>
 </div>
+</div>
+<div class="back-to-top">
+  <div id="back-to-top-button"><img title="Back to Top" src="img/icon-backtotop-1b04df73090f6b0f3192a3b71874ca3b3cc19dff16adc6cf365cd0c75897f6c0.png" alt="Icon backtotop" style="
+  width: 60px;"></div>
+</div>
+
+
 <style>
 .change-color{
   background-color: grey !important;
@@ -247,11 +270,12 @@
 <script type="text/javascript" src="js/past_year.js"></script>
 <script type="text/javascript" src="js/Column.js"></script>
 <script type="text/javascript" src="js/Popup.js"></script>
-
+<script type="text/javascript" src="js/slidewindow.js"></script>
 </body>
 <footer>
  <div style="background-color: #611d1b;width: 100%;
  height: 100px;">
 </div>
+
 </footer>
 </html>

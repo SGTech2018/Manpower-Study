@@ -1,3 +1,33 @@
+/*.table-cell2{
+      color: #601d1b;
+    border: 1px #601d1b solid;
+}
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700);
+body{
+   font-family: 'Yanone Kaffeesatz' !important;
+}*/
+.other-piechart3{
+      margin-left: 122px !important;
+}
+#list-group-item-p{
+    margin: 0px;
+    background-color: #6f6a68 !important;
+          padding: 12px;
+      color:white;
+      font-weight:bold;
+      background-color: #312e2e;
+}
+.list-group-item{
+      padding: 12px;
+      color:white;
+      font-weight:bold;
+      background-color: #312e2e;
+}
+.list-group-item:hover{
+  opacity: 0.7;
+  color:white !important;
+  
+}
 .tablechart2_format{
       margin-top: 20px;
     margin-left: 166px;
@@ -9,11 +39,12 @@
 div.back-to-top {
     position: fixed;
     bottom: 15px;
-    right: 20px;
+    right: 48px;
     z-index: 3;
 }
 div.back-to-top:hover{
 	opacity: 0.4;
+  cursor: pointer;
 }
 h2.aos-scroll{
 
@@ -31,6 +62,8 @@ div.graph-left{
 p{
 	color: #8a8181;
   width: 400px;
+     /* text-align: left;*/
+      line-height: 150%;
 }
 #description-adjacency{
 font-weight: bold;
@@ -51,7 +84,7 @@ width:1000px;
 }
       
 #description-left{
-    margin-left: 191px;
+    margin-left: 188px;
     margin-top: -7px;
 }
 
@@ -190,6 +223,25 @@ section.compare-year{
   /* IE7 inline-block hack */
 
   *zoom: 1;
+}
+.list-group-bookmark{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+      width: 177px;
+    position: fixed;
+    bottom: 100px;
+    right:0px;
+        /*right: -177px;*/
+}
+.list-group-bookmark2{
+  right: 0px;
 }
 .btn-group-vertical .job-title-button {
   display: block;

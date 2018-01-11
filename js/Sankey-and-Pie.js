@@ -667,16 +667,16 @@ $( document ).ready(function() {
    	}
    });
 
-Array.prototype.remove = function() {
-    var what, a = arguments, L = a.length, ax;
-    while (L && this.length) {
-        what = a[--L];
-        while ((ax = this.indexOf(what)) !== -1) {
-            this.splice(ax, 1);
-        }
-    }
-    return this;
-};
+   Array.prototype.remove = function() {
+   	var what, a = arguments, L = a.length, ax;
+   	while (L && this.length) {
+   		what = a[--L];
+   		while ((ax = this.indexOf(what)) !== -1) {
+   			this.splice(ax, 1);
+   		}
+   	}
+   	return this;
+   };
 
     // click the button 
     $(".selector-diff").click(function() {
@@ -856,7 +856,7 @@ google.charts.load('current', {'packages':['sankey']});
 var colors = ['#dbaa95','#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
 '#cab2d6', '#ffff99', '#1f78b4', '#33a02c','#99b2db','#aabcef'];
 document.getElementById("job-pathway-h2").innerHTML = 'Adjacency of Jobs'; 
-document.getElementById("description-left").innerHTML = 'The graph presents the adjacency of the top 10 jobs with in total 27 job clusters.';
+document.getElementById("description-left").innerHTML = 'The graph presents the adjacency of the top 10 jobs with in total 27 job clusters. The more weight a line has, the more similar two job clusters are. If detailed data is required, please click the overview button below.'; 
       // Set a callback to run when the Google Visualization API is loaded.
       google.charts.setOnLoadCallback(drawChart);
 
@@ -1280,7 +1280,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
 
          }
          google.charts.setOnLoadCallback(drawPieChart_softwareDeveloper());
-         document.getElementById("consultant_p").innerHTML = 'This graph shows the components for Software Developers.'; 
+         document.getElementById("consultant_p").innerHTML = 'This graph shows the further segmentation for Software Developers, divided by the skills it requires.'; 
   // ********************************************
   // ********************************************
   // Function Select Handler - google chart event
@@ -1366,43 +1366,56 @@ var data10_2 = new google.visualization.arrayToDataTable([
               google.charts.setOnLoadCallback(drawSankeyChart(title));
               google.charts.setOnLoadCallback(drawPieChart3(level));
               google.charts.setOnLoadCallback(drawStackChart(skill));
-              $('#piechart_consultant_div').hide();
-              $('#consultant_p').hide();
               if (row == 2){
               	google.charts.setOnLoadCallback(drawPieChart_consultant());
-              	document.getElementById("consultant_p").innerHTML = 'This graph shows the components for IT consultants.'; 
+              	document.getElementById("consultant_p").innerHTML = 'This graph shows a further segmentation for IT consultants, divided by the skills it requires.'; 
               	$('#consultant_p').show();
               	$('#piechart_consultant_div').show();
               }
-              if (row == 1){
+              else if (row == 1){
               	google.charts.setOnLoadCallback(drawPieChart_softwareDeveloper());
-              	document.getElementById("consultant_p").innerHTML = 'This graph shows the components for Software Developers.'; 
+              	document.getElementById("consultant_p").innerHTML = 'This graph shows a further segmentation for Software Developers, divided by the skills it requires.'; 
               	$('#consultant_p').show();
               	$('#piechart_consultant_div').show();
+              } else{
+              	$('#consultant_p').hide();
+              	$('#piechart_consultant_div').hide();
               }
+              $('#top-10-seniority-h2').innerHTML = "Top 10 Skills By Seniority";
 
               //drawTableChart(num);
               $('#stackchart_div').show();
               $('#piechart3_div').show();
               $('#description-whole').show();
+              if($('#piechart3_div').hasClass("other-piechart3")){
+              	$('#piechart3_div').removeClass("other-piechart3");
+              }
               document.getElementById("job-pathway-h2").innerHTML = 'Adjacency of Jobs'; 
-              document.getElementById("description-left").innerHTML = 'The graph presents the adjacency of the top 10 jobs with in total 27 job clusters.'; 
+              document.getElementById("description-left").innerHTML = 'The graph presents the adjacency of the top 10 jobs with in total 27 job clusters. The more weight a line has, the more similar two job clusters are. If detailed data is required, please click the overview button below.'; 
               $('.top-10-skill').show();
+              $('#description-right-3').show();
+              //$('#piechart_consultant_div').show();
+              //$('#consultant_p').show();
           }
           else{
+          	$('#top-10-seniority-h2').innerHTML = "Percentile of Seniority";
           	google.charts.setOnLoadCallback(drawPieChart2(title));
           	google.charts.setOnLoadCallback(drawPieChart3(level));
           	$('#stackchart_div').hide();
-          	$('#piechart3_div').hide();
-          	$('#description-whole').hide();
-          	document.getElementById("job-pathway-h2").innerHTML = 'Other Jobs';
-          	document.getElementById("description-left").innerHTML = 'Besides top 10, there are 17 jobs that are not listed since they are not the major issue. Here the percentage of each jobs is shown (excluded the top 10 jobs).'; 
-          }
+          	if(!$('#piechart3_div').hasClass("other-piechart3")){
+          		$('#piechart3_div').addClass("other-piechart3");}
+          		$('#description-whole').hide();
+          		$('#description-right-3').hide();
+          		$('#piechart_consultant_div').hide();
+          		$('#consultant_p').hide();
+          		document.getElementById("job-pathway-h2").innerHTML = 'Other Jobs';
+          		document.getElementById("description-left").innerHTML = 'Besides top 10, there are 17 jobs that are not listed since they are not the major issue. Here the percentage of each jobs is shown (excluded the top 10 jobs).'; 
+          	}
 
 
 
 
-          function drawSankeyChart(title) {
+          	function drawSankeyChart(title) {
                 // Sets chart options.
                 var options = {
                 	width: 600,

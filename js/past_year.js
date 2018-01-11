@@ -93,7 +93,7 @@ function drawTableChart2(index){
     //Create a HTML Table element.
     var table = document.createElement("table");
     table.style.color = "white";
-    table.style.background = "#da9d2d";
+    table.style.background = "#884f4e";
     
     //Get the count of columns.
     var columnCount = position[0].length;
@@ -105,7 +105,7 @@ function drawTableChart2(index){
       headerCell.align="center";
       headerCell.innerHTML = position[0][i];
       headerCell.width = "220px";
-      headerCell.bgColor = "#e1c188";
+      headerCell.bgColor = "#c59b9a";
       headerCell.height = "30px";
       //headerCell.style.border = "thick solid white";
       row.appendChild(headerCell);

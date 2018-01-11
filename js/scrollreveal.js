@@ -17,4 +17,4 @@ sr.reveal('#stackchart_div',{duration:2000});
 sr.reveal('#sankeychart_div',{duration:2000});
 sr.reveal('#columnchart_div',{duration:2000});
 sr.reveal('section');
-sr.reveal('button',{duration:1000});
+sr.reveal('.job-title-button',{duration:1000});

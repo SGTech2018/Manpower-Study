@@ -584,6 +584,7 @@ var data27_3 = [['software development',
   // *************************
   // *************************
   function drawTableChart(num){
+  	//console.log(num);
     //Build an array containing Customer records.
     var headline = new Array();
     headline.push(["Junior", "Middle", "Senior"]); 
@@ -784,6 +785,16 @@ for(i = 0; i < titles.length; i++){
             m.push(temp_array[t][1]);
             counter_m.push(1);
         }
+                if(s.indexOf(temp_array[t][1]) != -1){
+            // have element
+            index2 = s.indexOf(temp_array[t][1]);
+            counter_s[index2] += 1;
+        }
+        else{
+            // don't have element
+            s.push(temp_array[t][1]);
+            counter_s.push(1);
+        }
     }
 }
 }
@@ -804,6 +815,7 @@ for(i = 0; i < 10; i++){
 	total_array_s.push([s_item, s_counter]);
 }
 
+console.log(total_array_s);
 var total_array2 = [];
 if(titles.length != 1 && titles.length != 0){
 // sort by count desc
@@ -834,7 +846,8 @@ var sorted_s = total_array_s.sort(function (a,b){
 	}
 	return b[1] - a[1];
 });
-
+console.log("sorted_s:");
+console.log(sorted_s);
 for (i = 0; i < 10; i++){
 	total_array2.push([sorted_j[i][0], sorted_m[i][0], sorted_s[i][0]]);
 }
@@ -857,6 +870,7 @@ var colors = ['#dbaa95','#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
 '#cab2d6', '#ffff99', '#1f78b4', '#33a02c','#99b2db','#aabcef'];
 document.getElementById("job-pathway-h2").innerHTML = 'Adjacency of Jobs (For Year 2017)'; 
 document.getElementById("description-left").innerHTML = 'The graph presents the adjacency of the top 10 jobs with in total 27 job clusters. The more weight a line has, the more similar two job clusters are. If detailed data is required, please click the overview button below.'; 
+document.getElementById('top-10-seniority-h2').innerHTML = "Top 10 Skills By Seniority";
       // Set a callback to run when the Google Visualization API is loaded.
       google.charts.setOnLoadCallback(drawChart);
 
@@ -1381,7 +1395,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
               	$('#consultant_p').hide();
               	$('#piechart_consultant_div').hide();
               }
-              $('#top-10-seniority-h2').innerHTML = "Top 10 Skills By Seniority";
+              document.getElementById('top-10-seniority-h2').innerHTML = "Top 10 Skills By Seniority";
 
               //drawTableChart(num);
               $('#stackchart_div').show();
@@ -1398,7 +1412,7 @@ var data10_2 = new google.visualization.arrayToDataTable([
               //$('#consultant_p').show();
           }
           else{
-          	$('#top-10-seniority-h2').innerHTML = "Percentile of Seniority (For Year 2017)";
+          	document.getElementById('top-10-seniority-h2').innerHTML = "Percentile of Seniority (For Year 2017)";
           	google.charts.setOnLoadCallback(drawPieChart2(title));
           	google.charts.setOnLoadCallback(drawPieChart3(level));
           	$('#stackchart_div').hide();
